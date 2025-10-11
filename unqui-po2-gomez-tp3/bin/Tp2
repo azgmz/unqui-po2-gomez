@@ -1,0 +1,1051 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" version="28.1.1">
+  <diagram name="Página-1" id="VMDvP2rLo-K2ZTFbkS8l">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hX6Qi4lx2mb64ksaS4z7-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;Empleado&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- nombre: String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- dirección: String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- estadoCivil: String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- fechaDeNacimiento: Date&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- sueldoBasico: Int&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&lt;u style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;+ new (String, String, String, Date, Int)&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ nombre(): String&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ direccion(): String&lt;/div&gt;&lt;div&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ estadoCivil(): String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fechaDeNacimiento(): Date&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ edad(Date): Int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ suedoBasico(): float&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;+ sueldoBruto(): float&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;+ retenciones(): float&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;i&gt;+ sueldoNeto(): float&lt;/i&gt;&lt;/p&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="210" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="hX6Qi4lx2mb64ksaS4z7-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;Empresa&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- nombre: String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- cuit: String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- empleados: List&amp;lt;Empleado&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;u&gt;+ new (String, Int)&lt;/u&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ nombre(): String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ cuit(): Int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ totalSueldosNetos(): float&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ totalSueldosBrutos(): float&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ totalRetenciones(): float&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ liquidarSueldos(): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="360" width="177.5" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="hX6Qi4lx2mb64ksaS4z7-10" value="ConjuntoDeEmpleados" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="315" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hX6Qi4lx2mb64ksaS4z7-14" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;PlantaPermanente&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- cantidadDeHijos: Int&lt;br&gt;- antigüedad: float&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&amp;nbsp;+ cantidadDeHijos(): Int&lt;br&gt;&amp;nbsp;+ antigüedad(): float&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;+ sueldoBruto(): float&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ retenciones(): float&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="380" y="-10" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="hX6Qi4lx2mb64ksaS4z7-15" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.995;entryY=0.596;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="hX6Qi4lx2mb64ksaS4z7-14" target="hX6Qi4lx2mb64ksaS4z7-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="630" y="420" as="sourcePoint" />
+            <mxPoint x="494" y="113" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hX6Qi4lx2mb64ksaS4z7-17" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="hX6Qi4lx2mb64ksaS4z7-7">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="480" y="590" as="sourcePoint" />
+            <mxPoint x="134" y="297" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hX6Qi4lx2mb64ksaS4z7-19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;PlantaTemporaria&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- fechaDeFin: Date&lt;br&gt;- cantidadDeHorasExtras: Int&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&amp;nbsp;+ fechaDeFin(): Date&lt;div&gt;&amp;nbsp;+ cantidadDeHorasExtras(): int&lt;br&gt;&lt;div&gt;&amp;nbsp;+ sueldoBruto(): float&lt;/div&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;i&gt;+ retenciones(): float&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="380" y="-180" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="hX6Qi4lx2mb64ksaS4z7-20" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="hX6Qi4lx2mb64ksaS4z7-19" target="hX6Qi4lx2mb64ksaS4z7-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="758.74" y="400" as="sourcePoint" />
+            <mxPoint x="494" y="101.57142857142856" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Cn4EUTqCkjrCYGwAJMCn-8" value="*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="130" y="290" width="30" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Cn4EUTqCkjrCYGwAJMCn-10" value="ReciboDeHaberes" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="360" width="180" height="110" as="geometry">
+            <mxRectangle x="300" y="380" width="140" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Cn4EUTqCkjrCYGwAJMCn-11" value="- nombreEmpleado: String&lt;div&gt;- direccion:String&amp;nbsp;&lt;/div&gt;&lt;div&gt;- fechaEmision: date&lt;/div&gt;&lt;div&gt;- sueldoBruto: float&lt;/div&gt;&lt;div&gt;- sueldoNeto&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Cn4EUTqCkjrCYGwAJMCn-10">
+          <mxGeometry y="26" width="180" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="EvoC8irnceU8i1gPCg3v-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&lt;i&gt;Contratado&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- númeroDeContrato: Int&lt;br&gt;- medioDePago: String&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&amp;nbsp;+ númeroDeContrato(): Int&lt;br&gt;&amp;nbsp;+ medioDePago(): String&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;+ sueldoBruto(): float&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ retenciones(): float&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="380" y="165" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="EvoC8irnceU8i1gPCg3v-3" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="EvoC8irnceU8i1gPCg3v-1" target="hX6Qi4lx2mb64ksaS4z7-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="310" y="230" as="sourcePoint" />
+            <mxPoint x="470" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+
+
+
+
+https://drive.google.com/file/d/1rx6NJ81rkdxNJkyv3_Y381gYUcQbJ2ME/view?usp=sharing
+
+
+
+
+!classDefinition: #TestEmpresa category: #'Obj2-Tp2'!
+TestCase subclass: #TestEmpresa
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!TestEmpresa methodsFor: 'EmpleadoPlantaPermanente' stamp: 'abg 9/2/2025 16:36:59'!
+test005_UnEmpleadoPlantaPermanente_TieneInformaciónTambiénDeLaCantidadDeHijosYLaAntigüedad
+
+	| unEmpleado casado |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaPermanente conNombre: 'Diego' direccion: 'Calchaqui 230' estadoCivil: casado fechaDeNacimiento: June/27/1978 cantidadDeHijos: 2 conAntigüedadEnAños: 1 ySueldoBasico: 1000 * peso.
+	
+	Assert isTrue: unEmpleado esDePlantaPermanente.
+	Assert that: unEmpleado cantidadHijos isEqualTo: 2.
+	Assert that: unEmpleado antigüedad isEqualTo: 1. ! !
+
+!TestEmpresa methodsFor: 'EmpleadoPlantaPermanente' stamp: 'abg 9/2/2025 16:47:06'!
+test007_UnEmpleadoPlantaPermanenteTieneUnSueldoBrutoIgualAlBasicoYPorCantidadDeHijos
+
+	| unEmpleado soltero |
+	
+	soltero := Soltero new.
+	
+	unEmpleado := EmpleadoPlantaPermanente conNombre: 'Diego' direccion: 'Calchaqui 230' estadoCivil: soltero fechaDeNacimiento: June/27/1978 cantidadDeHijos: 2 conAntigüedadEnAños: 0 ySueldoBasico: 1000 * peso.
+	
+	Assert that: unEmpleado sueldoBruto isEqualTo: (unEmpleado sueldoBasico) + ((150 * peso) * 2)! !
+
+!TestEmpresa methodsFor: 'EmpleadoPlantaPermanente' stamp: 'abg 9/2/2025 16:48:00'!
+test008_UnEmpleadoPlantaPermanenteTieneUnSueldoBrutoIgualAlBasico_PorCantidadDeHijos_SiEsCasado
+
+	| unEmpleado casado |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaPermanente conNombre: 'Diego' direccion: 'Calchaqui 230' estadoCivil: casado fechaDeNacimiento: June/27/1978 cantidadDeHijos: 2 conAntigüedadEnAños: 0 ySueldoBasico: 1000 * peso.
+	
+	Assert that: unEmpleado sueldoBruto isEqualTo: (unEmpleado sueldoBasico) + ((150 * peso) * 2) + (100 * peso)! !
+
+!TestEmpresa methodsFor: 'EmpleadoPlantaPermanente' stamp: 'abg 9/2/2025 16:49:13'!
+test009_UnEmpleadoPlantaPermanenteTieneUnSueldoBrutoIgualAlBasico_PorCantidadDeHijos_SiEsCasado_YPorAntiguedad
+
+	| unEmpleado casado |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaPermanente conNombre: 'Diego' direccion: 'Calchaqui 230' estadoCivil: casado fechaDeNacimiento: June/27/1978 cantidadDeHijos: 2 conAntigüedadEnAños: 3 ySueldoBasico: 1000 * peso.
+	
+	Assert that: unEmpleado sueldoBruto isEqualTo: (unEmpleado sueldoBasico) + ((150 * peso) * 2) + (100 * peso) + ((50 * peso) * 3)! !
+
+!TestEmpresa methodsFor: 'EmpleadoPlantaPermanente' stamp: 'abg 9/2/2025 18:28:28'!
+test010_UnEmpleadoPlantaPermanenteTieneRetencionesPorObraSocial_PorHijos_YPorAportesJubilatorios
+
+	| unEmpleado casado |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaPermanente conNombre: 'Diego' direccion: 'Calchaqui 230' estadoCivil: casado fechaDeNacimiento: June/27/1978 cantidadDeHijos: 2 conAntigüedadEnAños: 3 ySueldoBasico: 1000 * peso.
+	
+	Assert that: unEmpleado retenciones isEqualTo: (unEmpleado obraSocial) + (unEmpleado retenciónHijos) + (unEmpleado aportesJubilatorios).! !
+
+!TestEmpresa methodsFor: 'EmpleadoPlantaPermanente' stamp: 'abg 9/2/2025 18:31:41'!
+test011_UnEmpleadoConoceSuSueldoNeto
+
+	| unEmpleado casado |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaPermanente conNombre: 'Diego' direccion: 'Calchaqui 230' estadoCivil: casado fechaDeNacimiento: June/27/1978 cantidadDeHijos: 2 conAntigüedadEnAños: 3 ySueldoBasico: 1000 * peso.
+	
+	Assert that: unEmpleado sueldoNeto isEqualTo: (unEmpleado sueldoBruto) - (unEmpleado retenciones).! !
+
+
+!TestEmpresa methodsFor: 'EmpleadoContratado' stamp: 'abg 9/3/2025 16:50:14'!
+test021_UnEmpleadoContratadoTieneTambienNumeroDeContratoYMedioDePago
+
+	| unEmpleado casada |
+	
+	casada := Casado new.
+	
+	unEmpleado := EmpleadoContratado conNombre: 'Macarena' direccion: '9 de julio 110' estadoCivil: casada fechaDeNacimiento: December/05/1989 numeroDeContrato: 220 medioDePago: 'efectivo' ySueldoBasico: 1500 * peso.
+	
+	Assert isTrue: unEmpleado esContratado.
+	Assert that: unEmpleado numeroDeContrato isEqualTo: 220.
+	Assert that: unEmpleado medioDePago isEqualTo: 'efectivo'.
+	! !
+
+!TestEmpresa methodsFor: 'EmpleadoContratado' stamp: 'abg 9/3/2025 16:55:05'!
+test022_UnEmpleadoContratadoTieneUnSueldoBrutoIgualAlBasico
+
+	| unEmpleado casada |
+	
+	casada := Casado new.
+	
+	unEmpleado := EmpleadoContratado conNombre: 'Macarena' direccion: '9 de julio 110' estadoCivil: casada fechaDeNacimiento: December/05/1989 numeroDeContrato: 220 medioDePago: 'efectivo' ySueldoBasico: 1500 * peso.
+	
+	Assert that: unEmpleado sueldoBruto isEqualTo: unEmpleado sueldoBasico.
+	! !
+
+!TestEmpresa methodsFor: 'EmpleadoContratado' stamp: 'abg 9/3/2025 17:03:52'!
+test023_UnEmpleadoContratadoTieneRetencionesFijas50
+
+	| unaEmpleada casada |
+	
+	casada := Casado new.
+	
+	unaEmpleada := EmpleadoContratado conNombre: 'Macarena' direccion: '9 de julio 110' estadoCivil: casada fechaDeNacimiento: December/05/1989 numeroDeContrato: 220 medioDePago: 'efectivo' ySueldoBasico: 1500 * peso.
+	
+	Assert that: unaEmpleada retenciones isEqualTo: 50 * peso.
+	! !
+
+
+!TestEmpresa methodsFor: 'Empresa' stamp: 'abg 9/2/2025 16:42:01'!
+test006_UnaEmpresaTieneUnListadoDeEmpleados
+
+	| unaEmpresa unEmpleado otroEmpleado soltero casado |
+	
+	soltero := Soltero new.
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaPermanente conNombre: 'Diego' direccion: 'Calchaqui 230' estadoCivil: casado fechaDeNacimiento: June/27/1978 cantidadDeHijos: 2 conAntigüedadEnAños: 1 ySueldoBasico: 1000 * peso.
+	
+	otroEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyu 205' estadoCivil: soltero fechaDeNacimiento: June/27/1978 ySueldoBasico: 1000 * peso.
+	
+	unaEmpresa := Empresa conNombre: 'Coto' yCuit: '27456280316'.
+	
+	unaEmpresa enlistaA: unEmpleado.
+	unaEmpresa enlistaA: otroEmpleado.
+	
+	Assert isTrue: (unaEmpresa tieneA: unEmpleado).
+	Assert isTrue: (unaEmpresa tieneA: otroEmpleado).
+	Assert that: unaEmpresa cantidadDeEmpleados isEqualTo: 2.! !
+
+!TestEmpresa methodsFor: 'Empresa' stamp: 'abg 9/2/2025 20:12:23'!
+test014_UnaEmpresaDebeCalcularElPagoDeSueldos
+
+	| unEmpleado casado otroEmpleado soltero unaEmpresa |
+	
+	casado := Casado new.
+	soltero := Soltero new.
+	
+	unEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyú 525' estadoCivil: casado fechaDeNacimiento: June/20/1973  fechaDeFin: December/31/2025 cantidadDeHorasExtras: 5  ySueldoBasico: 1000 * peso. 
+	
+      otroEmpleado := EmpleadoPlantaPermanente conNombre: 'Julian' direccion: '25 de mayo 231' estadoCivil: soltero fechaDeNacimiento: December/05/1989 cantidadDeHijos: 2 conAntigüedadEnAños: 4 ySueldoBasico: 1200 * peso.
+	
+	unaEmpresa := Empresa conNombre: 'Vital' yCuit: 24586315758. 
+	
+	unaEmpresa enlistaA: unEmpleado.
+	unaEmpresa enlistaA: otroEmpleado.
+	
+	Assert that: unaEmpresa pagoDeSueldos isEqualTo: (unEmpleado sueldoNeto) + (otroEmpleado sueldoNeto)! !
+
+!TestEmpresa methodsFor: 'Empresa' stamp: 'abg 9/2/2025 20:15:53'!
+test015_UnaEmpresaDebeCalcularElMontoTotalSueldosBrutos
+
+	| unEmpleado casado otroEmpleado soltero unaEmpresa |
+	
+	casado := Casado new.
+	soltero := Soltero new.
+	
+	unEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyú 525' estadoCivil: casado fechaDeNacimiento: June/20/1973  fechaDeFin: December/31/2025 cantidadDeHorasExtras: 5  ySueldoBasico: 1000 * peso. 
+	
+      otroEmpleado := EmpleadoPlantaPermanente conNombre: 'Julian' direccion: '25 de mayo 231' estadoCivil: soltero fechaDeNacimiento: December/05/1989 cantidadDeHijos: 2 conAntigüedadEnAños: 4 ySueldoBasico: 1200 * peso.
+	
+	unaEmpresa := Empresa conNombre: 'Vital' yCuit: 24586315758. 
+	
+	unaEmpresa enlistaA: unEmpleado.
+	unaEmpresa enlistaA: otroEmpleado.
+	
+	Assert that: unaEmpresa montoTotalSueldosBrutos isEqualTo: (unEmpleado sueldoBruto) + (otroEmpleado sueldoBruto)! !
+
+!TestEmpresa methodsFor: 'Empresa' stamp: 'abg 9/2/2025 20:16:30'!
+test016_UnaEmpresaDebeCalcularElMontoTotalRetenciones
+
+	| unEmpleado casado otroEmpleado soltero unaEmpresa |
+	
+	casado := Casado new.
+	soltero := Soltero new.
+	
+	unEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyú 525' estadoCivil: casado fechaDeNacimiento: June/20/1973  fechaDeFin: December/31/2025 cantidadDeHorasExtras: 5  ySueldoBasico: 1000 * peso. 
+	
+      otroEmpleado := EmpleadoPlantaPermanente conNombre: 'Julian' direccion: '25 de mayo 231' estadoCivil: soltero fechaDeNacimiento: December/05/1989 cantidadDeHijos: 2 conAntigüedadEnAños: 4 ySueldoBasico: 1200 * peso.
+	
+	unaEmpresa := Empresa conNombre: 'Vital' yCuit: 24586315758. 
+	
+	unaEmpresa enlistaA: unEmpleado.
+	unaEmpresa enlistaA: otroEmpleado.
+	
+	Assert that: unaEmpresa montoTotalRetenciones isEqualTo: (unEmpleado retenciones) + (otroEmpleado retenciones)! !
+
+!TestEmpresa methodsFor: 'Empresa' stamp: 'abg 9/2/2025 22:31:18'!
+test017_UnaEmpresaRealizaLaLiquidacionDeSueldosPorCadaEmpleado
+
+	| unEmpleado casado otroEmpleado soltero unaEmpresa |
+	
+	casado := Casado new.
+	soltero := Soltero new.
+	
+	unEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyú 525' estadoCivil: casado fechaDeNacimiento: June/20/1973  fechaDeFin: December/31/2025 cantidadDeHorasExtras: 5  ySueldoBasico: 1000 * peso. 
+	
+      otroEmpleado := EmpleadoPlantaPermanente conNombre: 'Julian' direccion: '25 de mayo 231' estadoCivil: soltero fechaDeNacimiento: December/05/1989 cantidadDeHijos: 2 conAntigüedadEnAños: 4 ySueldoBasico: 1200 * peso.
+	
+	unaEmpresa := Empresa conNombre: 'Vital' yCuit: 24586315758. 
+	
+	unaEmpresa enlistaA: unEmpleado.
+	unaEmpresa enlistaA: otroEmpleado.
+	
+	unaEmpresa liquidacionDeSueldoDe: unEmpleado.
+	unaEmpresa liquidacionDeSueldoDe: otroEmpleado.
+	
+	Assert isTrue: (unaEmpresa tieneReciboDeHaberesDe: unEmpleado).
+	Assert isTrue: (unaEmpresa tieneReciboDeHaberesDe: otroEmpleado).
+	Assert that: unaEmpresa cantidadDeRecibosDeHaberes isEqualTo: 2.! !
+
+!TestEmpresa methodsFor: 'Empresa' stamp: 'abg 9/3/2025 16:27:25'!
+test018_ElReciboDeHaberesTieneNombreDireccionFechaEmisionSueldoBrutoYNeto
+
+	| unEmpleado casado unaEmpresa |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyú 525' estadoCivil: casado fechaDeNacimiento: June/20/1973  fechaDeFin: December/31/2025 cantidadDeHorasExtras: 5  ySueldoBasico: 1000 * peso. 
+	
+	unaEmpresa := Empresa conNombre: 'Medamax' yCuit: 29587715701. 
+	
+	unaEmpresa enlistaA: unEmpleado.
+	
+	unaEmpresa liquidacionDeSueldoDe: unEmpleado.
+	
+	Assert that: ((unaEmpresa recibosDeHaberesDe: unEmpleado) nombreDelEmpleado) isEqualTo: unEmpleado nombre.
+	Assert that: ((unaEmpresa recibosDeHaberesDe: unEmpleado) dirección) isEqualTo: unEmpleado direccion.
+	Assert that: ((unaEmpresa recibosDeHaberesDe: unEmpleado) fechaDeEmision) isEqualTo: September/03/2025.
+																								"Fecha actual"
+	Assert that: ((unaEmpresa recibosDeHaberesDe: unEmpleado) sueldoBruto) isEqualTo: unEmpleado sueldoBruto.
+	Assert that: ((unaEmpresa recibosDeHaberesDe: unEmpleado) sueldoNeto) isEqualTo: unEmpleado sueldoNeto.! !
+
+!TestEmpresa methodsFor: 'Empresa' stamp: 'abg 9/3/2025 16:35:17'!
+test019_ElReciboDeHaberesTieneUnDesgloceDeConceptosPorEmpleadoPlantaTemporaria
+
+	| unEmpleado casado unaEmpresa |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyú 525' estadoCivil: casado fechaDeNacimiento: June/20/1973  fechaDeFin: December/31/2025 cantidadDeHorasExtras: 5  ySueldoBasico: 1000 * peso. 
+	
+	unaEmpresa := Empresa conNombre: 'Medamax' yCuit: 29587715701. 
+	
+	unaEmpresa enlistaA: unEmpleado.
+	
+	unaEmpresa liquidacionDeSueldoDe: unEmpleado.
+	
+	Assert that: ((unaEmpresa recibosDeHaberesDe: unEmpleado) listaDeConcepto) totalDelDesgloce isEqualTo: (unEmpleado sueldoBasico) + (unEmpleado cantidadDePesosPorHorasExtras) + (unEmpleado obraSocial) + (unEmpleado retenciónPorMayorDe50) + (unEmpleado aportesJubilatorios) + (unEmpleado retenciónPorHorasExtras).
+	! !
+
+!TestEmpresa methodsFor: 'Empresa' stamp: 'abg 9/3/2025 16:44:38'!
+test020_ElReciboDeHaberesTieneUnDesgloceDeConceptosPorEmpleadoPlantaPermanente
+
+	| unEmpleado casado unaEmpresa |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaPermanente conNombre: 'Julian' direccion: '25 de mayo 231' estadoCivil: casado fechaDeNacimiento: December/05/1989 cantidadDeHijos: 2 conAntigüedadEnAños: 4 ySueldoBasico: 1200 * peso.
+	
+	unaEmpresa := Empresa conNombre: 'Medamax' yCuit: 29587715701. 
+	
+	unaEmpresa enlistaA: unEmpleado.
+	
+	unaEmpresa liquidacionDeSueldoDe: unEmpleado.
+	
+	Assert that: ((unaEmpresa recibosDeHaberesDe: unEmpleado) listaDeConcepto) totalDelDesgloce isEqualTo: (unEmpleado sueldoBasico) + (unEmpleado salarioFamiliar) + (unEmpleado pesosPorAntiguedad) + (unEmpleado obraSocial) + (unEmpleado retenciónHijos) + (unEmpleado aportesJubilatorios).
+	! !
+
+
+!TestEmpresa methodsFor: 'EmpleadoPlantaTemporaria' stamp: 'abg 9/2/2025 16:37:30'!
+test004_UnEmpleadoDePlantaTemporaria_TieneInformaciónTambiénDeLaFechaDeFinYCantidadDeHorasExtras
+
+	| unEmpleado casado |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaTemporaria conNombre: 'unNombre' direccion: 'unaDirección' estadoCivil: casado fechaDeNacimiento: June/27/1978 fechaDeFin: December/31/2025 cantidadDeHorasExtras: 2 ySueldoBasico: 1000 * peso.
+	
+	Assert isTrue: unEmpleado esDePlantaTemporaria.
+	Assert that: unEmpleado fechaDeFin isEqualTo: December/31/2025. 
+	Assert that: unEmpleado cantidadDeHorasExtras isEqualTo: 2. ! !
+
+!TestEmpresa methodsFor: 'EmpleadoPlantaTemporaria' stamp: 'abg 9/2/2025 19:10:21'!
+test012_UnEmpleadoPlantaTemporalTieneUnSueldoBrutoIgualAlBasico_PorCantidadDeHorasExtras
+
+	| unEmpleado casado |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyú 525' estadoCivil: casado fechaDeNacimiento: June/20/1977  fechaDeFin: December/31/2025 cantidadDeHorasExtras: 5  ySueldoBasico: 1000 * peso. 
+	
+	Assert that: unEmpleado sueldoBruto isEqualTo: (unEmpleado sueldoBasico) + (5 * 40 * peso)! !
+
+!TestEmpresa methodsFor: 'EmpleadoPlantaTemporaria' stamp: 'abg 9/2/2025 20:03:38'!
+test013_UnEmpleadoPlantaTemporalTieneRetencionesPorObraSocial_SiSuperaLos50Años_PorAportesJubilatorios_YPorCadaHoraExtra
+
+	| unEmpleado casado |
+	
+	casado := Casado new.
+	
+	unEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyú 525' estadoCivil: casado fechaDeNacimiento: June/20/1973  fechaDeFin: December/31/2025 cantidadDeHorasExtras: 5  ySueldoBasico: 1000 * peso. 
+                                  "Tiene 52 años"
+	
+	Assert that: unEmpleado retenciones isEqualTo: (unEmpleado obraSocial) + (25 * peso) + (unEmpleado aportesJubilatorios) + (5 * 5 * peso).! !
+
+
+!TestEmpresa methodsFor: 'Empleado' stamp: 'abg 9/2/2025 16:51:48'!
+test002_UnEmpleadoSabeSuEdad
+
+	| unEmpleado soltero |
+	
+	soltero := Soltero new.
+	
+	unEmpleado := Empleado conNombre: 'Diego' direccion: 'Calchaqui 870' estadoCivil: soltero fechaDeNacimiento: June/27/1978 ySueldoBasico: 1000 * peso.
+	
+	Assert that: unEmpleado edad isEqualTo: 47.
+! !
+
+!TestEmpresa methodsFor: 'Empleado' stamp: 'abg 9/3/2025 17:02:56'!
+test024_TodosLosEmpleadosTienenUnSueldoNetoQueSeComportaIgual
+
+	| unEmpleado otroEmpleado tercerEmpleado casada casado soltero|
+	
+	casada := Casado new.
+	casado := Casado new.
+	soltero := Soltero new.
+	
+	unEmpleado := EmpleadoContratado conNombre: 'Macarena' direccion: '9 de julio 110' estadoCivil: casada fechaDeNacimiento: December/05/1989 numeroDeContrato: 220 medioDePago: 'efectivo' ySueldoBasico: 1500 * peso.
+	
+	otroEmpleado := EmpleadoPlantaTemporaria conNombre: 'Juan' direccion: 'Yapeyú 525' estadoCivil: casado fechaDeNacimiento: June/20/1973  fechaDeFin: December/31/2025 cantidadDeHorasExtras: 5  ySueldoBasico: 1000 * peso. 
+	
+      tercerEmpleado := EmpleadoPlantaPermanente conNombre: 'Julian' direccion: '25 de mayo 231' estadoCivil: soltero fechaDeNacimiento: December/05/1989 cantidadDeHijos: 2 conAntigüedadEnAños: 4 ySueldoBasico: 1200 * peso.
+	
+	Assert that: unEmpleado sueldoNeto isEqualTo: unEmpleado sueldoBruto - unEmpleado retenciones.
+	Assert that: otroEmpleado sueldoNeto isEqualTo: otroEmpleado sueldoBruto - otroEmpleado retenciones.
+	Assert that: tercerEmpleado sueldoNeto isEqualTo: tercerEmpleado sueldoBruto - tercerEmpleado retenciones.
+	! !
+
+!TestEmpresa methodsFor: 'Empleado' stamp: 'abg 9/3/2025 17:20:23'!
+test025_ElReciboDeHaberesTieneUnDesgloceDeConceptosPorEmpleadoContratadoDeGastosAdministrativosContractuales
+
+	| unaEmpleada casada unaEmpresa |
+	
+	casada := Casado new.
+	
+	unaEmpleada := EmpleadoContratado conNombre: 'Macarena' direccion: '9 de julio 110' estadoCivil: casada fechaDeNacimiento: December/05/1989 numeroDeContrato: 220 medioDePago: 'efectivo' ySueldoBasico: 1500 * peso.
+	
+unaEmpresa := Empresa conNombre: 'Medamax' yCuit: 29587715701. 
+	
+	unaEmpresa enlistaA: unaEmpleada.
+	
+	unaEmpresa liquidacionDeSueldoDe: unaEmpleada.
+	
+	Assert that: ((unaEmpresa recibosDeHaberesDe: unaEmpleada) listaDeConcepto) totalDelDesgloce isEqualTo: 50 * peso.
+	Assert that: (((unaEmpresa recibosDeHaberesDe: unaEmpleada) listaDeConcepto) desgloceDeConceptos) concepto isEqualTo: 'Gastos Administrativos Contractuales'.
+	! !
+
+
+!TestEmpresa methodsFor: 'Inicialización' stamp: 'abg 9/2/2025 16:42:34'!
+test001_UnEmpleadoTieneUnNombre_Dirección_EstadoCivil_FechaDeNacimiento_YSueldoBasico
+
+	| unEmpleado soltero |
+	
+	soltero := Soltero new.
+	
+	unEmpleado := Empleado conNombre: 'Juan' direccion: 'Alberdi 193' estadoCivil: soltero fechaDeNacimiento: June/27/1978 ySueldoBasico: 1000 * peso.
+	
+	Assert that: unEmpleado nombre isEqualTo: 'Juan'.
+	Assert that: unEmpleado direccion isEqualTo: 'Alberdi 193'.
+	Assert isTrue: unEmpleado esSoltero.
+	Assert that: unEmpleado fechaDeNacimiento isEqualTo:  June/27/1978.
+	Assert that:  unEmpleado sueldoBasico isEqualTo: 1000 * peso.! !
+
+!TestEmpresa methodsFor: 'Inicialización' stamp: 'abg 9/2/2025 20:18:26'!
+test003_UnaEmpresaSabeSuNombreYCuit_YNoTieneReciboDeHaberes
+
+	| unaEmpresa |
+	
+		unaEmpresa := Empresa conNombre: 'Coto' yCuit: '27456280316'.
+	
+	Assert that: unaEmpresa nombre isEqualTo: 'Coto'.
+	Assert that: unaEmpresa cuit isEqualTo: '27456280316'.
+	Assert that: unaEmpresa cantidadDeRecibosDeHaberes isEqualTo: 0.! !
+
+
+!classDefinition: #DesgloceDeConceptos category: #'Obj2-Tp2-Ejercicio1'!
+Object subclass: #DesgloceDeConceptos
+	instanceVariableNames: 'desgloceDeConceptos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!DesgloceDeConceptos methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 17:09:58'!
+agregarConceptosEmpleadoContratado
+	
+	desgloceDeConceptos := Dictionary new.
+	
+	desgloceDeConceptos at: 'Gastos Administrativos Contractuales' put: 50 * peso.! !
+
+!DesgloceDeConceptos methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:38:16'!
+agregarConceptosEmpleadoPermanente: unEmpleado
+	
+	desgloceDeConceptos := Dictionary new.
+	
+	desgloceDeConceptos at: 'SueldoBruto- Sueldo Básico' put: unEmpleado sueldoBasico.
+	desgloceDeConceptos at: 'SueldoBruto- Salario Familiar' put: unEmpleado salarioFamiliar.
+	desgloceDeConceptos at: 'SueldoBruto- Antigüedad' put: unEmpleado pesosPorAntiguedad.
+	desgloceDeConceptos at: 'Retención- Obra Social' put: unEmpleado obraSocial.
+	desgloceDeConceptos at: 'Retención- Por Hijos' put: unEmpleado retenciónHijos.
+	desgloceDeConceptos at: 'Retención- Aporte Jubilatorio' put: unEmpleado aportesJubilatorios.
+	! !
+
+!DesgloceDeConceptos methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:38:35'!
+agregarConceptosEmpleadoTemporario: unEmpleado
+
+	desgloceDeConceptos := Dictionary new.
+	
+	desgloceDeConceptos at: 'SueldoBruto- Sueldo Básico' put: unEmpleado sueldoBasico.
+	desgloceDeConceptos at: 'SueldoBruto- Horas Extras' put: unEmpleado cantidadDePesosPorHorasExtras.
+	desgloceDeConceptos at: 'Retención- Obra Social' put: unEmpleado obraSocial.
+	desgloceDeConceptos at: 'Retención- Mayor de 50 años' put: unEmpleado retenciónPorMayorDe50.
+	desgloceDeConceptos at: 'Retención- Aporte Jubilatorio' put: unEmpleado aportesJubilatorios.
+	desgloceDeConceptos at: 'Retención- Horas Extras' put: unEmpleado retenciónPorHorasExtras.! !
+
+!DesgloceDeConceptos methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 17:14:44'!
+desgloceDeConceptos
+	
+	^ desgloceDeConceptos.! !
+
+!DesgloceDeConceptos methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:42:23'!
+totalDelDesgloce
+	
+	| totalDelDesgloce |
+	
+	totalDelDesgloce := 0 * peso.
+	
+	desgloceDeConceptos do: [ :valor | totalDelDesgloce := totalDelDesgloce + valor value].
+	
+	^ totalDelDesgloce! !
+
+
+!classDefinition: #Empleado category: #'Obj2-Tp2-Ejercicio1'!
+Object subclass: #Empleado
+	instanceVariableNames: 'nombre direccion estadoCivil fechaDeNacimiento sueldoBasico'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 19:02:55'!
+añoDeNacimiento
+	
+	^ fechaDeNacimiento monthOfYear year number! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:31:06'!
+direccion
+	
+	^ direccion! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 19:02:34'!
+edad
+	
+	^ 2025 - (self añoDeNacimiento).! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 19:16:18'!
+empleado: unNombre conDireccionEn: unaDireccion como: unEstadoCivil nacido: unaFecha yConSueldoBasico: unMontoEnPesos 
+	
+	nombre := unNombre.
+	direccion := unaDireccion.
+	estadoCivil := unEstadoCivil.
+	fechaDeNacimiento := unaFecha.
+	sueldoBasico := unMontoEnPesos.! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 16:38:48'!
+esSoltero
+	
+	^ estadoCivil esSoltero.! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:31:11'!
+estadoCivil
+	
+	^ estadoCivil! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:31:15'!
+fechaDeNacimiento
+	
+	^ fechaDeNacimiento! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:31:00'!
+nombre
+	
+	^ nombre! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 19:14:57'!
+obraSocial
+	
+	^ (self sueldoBruto) * 0.10! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 17:02:19'!
+retenciones
+	
+	self subclassResponsibility.! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 19:16:26'!
+sueldoBasico
+	
+	^ sueldoBasico.! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:55:25'!
+sueldoBruto
+	
+	^ sueldoBasico.! !
+
+!Empleado methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 18:32:02'!
+sueldoNeto
+	
+	^ (self sueldoBruto) - (self retenciones)! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Empleado class' category: #'Obj2-Tp2-Ejercicio1'!
+Empleado class
+	instanceVariableNames: ''!
+
+!Empleado class methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 19:15:50'!
+conNombre: unNombre direccion: unaDireccion estadoCivil: unEstadoCivil fechaDeNacimiento: unaFecha ySueldoBasico: unMontoEnPesos 
+
+	^ self new empleado: unNombre conDireccionEn: unaDireccion como: unEstadoCivil nacido: unaFecha yConSueldoBasico: unMontoEnPesos.! !
+
+
+!classDefinition: #EmpleadoContratado category: #'Obj2-Tp2-Ejercicio1'!
+Empleado subclass: #EmpleadoContratado
+	instanceVariableNames: 'numeroDeContrato medioDePago'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!EmpleadoContratado methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:53:37'!
+conNombre: unNombre en: unaDireccion como: unEstadoCivil nacido: unaFecha con: unNumeroDeContrato con: unMedioDePago yConSueldoBasico: unaCantidad 
+	
+	nombre := unNombre.
+	direccion := unaDireccion.
+	estadoCivil := unEstadoCivil.
+	fechaDeNacimiento := unaFecha.
+	numeroDeContrato := unNumeroDeContrato.
+	medioDePago := unMedioDePago.
+	sueldoBasico := unaCantidad.! !
+
+!EmpleadoContratado methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 17:08:58'!
+conceptosAAgregarPara: listaDeConceptos 
+	
+	^ listaDeConceptos agregarConceptosEmpleadoContratado.
+	! !
+
+!EmpleadoContratado methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:53:51'!
+esContratado
+	
+	^ true.! !
+
+!EmpleadoContratado methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:54:07'!
+medioDePago
+	
+	^ medioDePago.! !
+
+!EmpleadoContratado methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:54:00'!
+numeroDeContrato
+	
+	^ numeroDeContrato.! !
+
+!EmpleadoContratado methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 17:04:03'!
+retenciones
+	
+	^ 50 * peso.! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'EmpleadoContratado class' category: #'Obj2-Tp2-Ejercicio1'!
+EmpleadoContratado class
+	instanceVariableNames: ''!
+
+!EmpleadoContratado class methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:52:21'!
+conNombre: unNombre direccion: unaDireccion estadoCivil: unEstadoCivil fechaDeNacimiento: unaFecha numeroDeContrato: unNumeroDeContrato medioDePago: unMedioDePago ySueldoBasico: unaCantidad 
+	
+	^ self new conNombre: unNombre en: unaDireccion como: unEstadoCivil nacido: unaFecha con: unNumeroDeContrato con: unMedioDePago yConSueldoBasico: unaCantidad.! !
+
+
+!classDefinition: #EmpleadoPlantaPermanente category: #'Obj2-Tp2-Ejercicio1'!
+Empleado subclass: #EmpleadoPlantaPermanente
+	instanceVariableNames: 'cantidadHijos antigüedad'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 22:29:52'!
+antigüedad
+	
+	^ antigüedad! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 18:28:17'!
+aportesJubilatorios
+	
+	^ (self sueldoBruto * 0.15) * peso.! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 16:44:01'!
+asignaciónPorConyuge
+	
+	^ estadoCivil asignaciónPorConyuge.! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 22:29:47'!
+cantidadHijos
+	
+	^ cantidadHijos! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 23:04:57'!
+conceptosAAgregarPara: listaDeConceptos 
+	
+	^ listaDeConceptos agregarConceptosEmpleadoPermanente: self.
+	! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 16:28:18'!
+empleado: unNombre conDireccionEn: unaDireccion como: unEstadoCivil nacido: unaFecha con: cantidadDeHijos conAntigüedadEnAños: cantidadDeAños yConSueldoBasico: unMontoEnPesos 
+	
+	nombre := unNombre.
+	direccion := unaDireccion.
+	estadoCivil := unEstadoCivil.
+	fechaDeNacimiento := unaFecha.
+	cantidadHijos := cantidadDeHijos.
+	antigüedad := cantidadDeAños.
+	sueldoBasico := unMontoEnPesos.
+	! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 21:53:23'!
+esDePlantaPermanente
+	
+	^ true.! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 21:53:02'!
+esDePlantaTemporaria
+	
+	^ false.! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 23:10:14'!
+pesosPorAntiguedad
+	
+	^ self antigüedad * 50 * peso.! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 18:27:35'!
+retenciones
+	
+	^ self obraSocial + self retenciónHijos + self aportesJubilatorios.! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 18:25:42'!
+retenciónHijos
+	
+	^ (20 * cantidadHijos ) * peso! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 23:09:24'!
+salarioFamiliar
+	
+	^ (150 * cantidadHijos * peso) + self asignaciónPorConyuge.! !
+
+!EmpleadoPlantaPermanente methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 23:09:54'!
+sueldoBruto
+	
+	^ self sueldoBasico + self salarioFamiliar + self pesosPorAntiguedad.! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'EmpleadoPlantaPermanente class' category: #'Obj2-Tp2-Ejercicio1'!
+EmpleadoPlantaPermanente class
+	instanceVariableNames: ''!
+
+!EmpleadoPlantaPermanente class methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 16:28:52'!
+conNombre: unNombre direccion: unaDireccion estadoCivil: unEstadoCivil fechaDeNacimiento: unaFecha cantidadDeHijos: cantidadDeHijos conAntigüedadEnAños: cantidadDeAños ySueldoBasico: unMontoEnPesos 
+	
+	^ self new empleado: unNombre conDireccionEn: unaDireccion como: unEstadoCivil nacido: unaFecha con: cantidadDeHijos conAntigüedadEnAños: cantidadDeAños yConSueldoBasico: unMontoEnPesos.! !
+
+
+!classDefinition: #EmpleadoPlantaTemporaria category: #'Obj2-Tp2-Ejercicio1'!
+Empleado subclass: #EmpleadoPlantaTemporaria
+	instanceVariableNames: 'fechaDeFin cantidadDeHorasExtras'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 19:58:39'!
+aportesJubilatorios
+	
+	^ (self sueldoBruto) * 0.10. ! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 22:28:19'!
+cantidadDeHorasExtras
+	
+	^ cantidadDeHorasExtras! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 22:49:04'!
+cantidadDePesosPorHorasExtras
+
+	^ (cantidadDeHorasExtras * 40) * peso! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:06:42'!
+conceptosAAgregarPara: listaDeConceptos 
+	
+	^ listaDeConceptos agregarConceptosEmpleadoTemporario: self.
+	! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 22:26:47'!
+empleado: unNombre conDireccionEn: unaDireccion como: unEstadoCivil nacido: unaFecha conFechaDeFin: otraFecha cantidadDeHorasExtras: cantidadEnHoras yConSueldoBasico: unMontoEnPesos 
+	
+	nombre := unNombre.
+	direccion := unaDireccion.
+	estadoCivil := unEstadoCivil.
+	fechaDeNacimiento := unaFecha.
+	fechaDeFin := otraFecha.
+	cantidadDeHorasExtras := cantidadEnHoras.
+	sueldoBasico := unMontoEnPesos.
+	! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 21:52:17'!
+esDePlantaTemporaria
+	
+	^ true.! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 22:28:13'!
+fechaDeFin
+	
+	^ fechaDeFin! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 20:04:00'!
+retenciones
+	
+	^ self obraSocial + self retenciónPorMayorDe50 + self aportesJubilatorios + self retenciónPorHorasExtras.! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 20:04:21'!
+retenciónPorHorasExtras
+	
+	^ (5 * cantidadDeHorasExtras) * peso.! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 19:54:17'!
+retenciónPorMayorDe50
+	
+	^(self edad > 50) ifTrue: (25 * peso) ifFalse: (0 * peso). ! !
+
+!EmpleadoPlantaTemporaria methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 22:49:09'!
+sueldoBruto
+	
+	^ self sueldoBasico + self cantidadDePesosPorHorasExtras.! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'EmpleadoPlantaTemporaria class' category: #'Obj2-Tp2-Ejercicio1'!
+EmpleadoPlantaTemporaria class
+	instanceVariableNames: ''!
+
+!EmpleadoPlantaTemporaria class methodsFor: 'as yet unclassified' stamp: 'abg 8/27/2025 22:26:08'!
+conNombre: unNombre direccion: unaDireccion estadoCivil: unEstadoCivil fechaDeNacimiento: unaFecha fechaDeFin: otraFecha cantidadDeHorasExtras: cantidadEnHoras ySueldoBasico: unMontoEnPesos 
+	
+	^ self new empleado: unNombre conDireccionEn: unaDireccion como: unEstadoCivil nacido: unaFecha conFechaDeFin: otraFecha cantidadDeHorasExtras: cantidadEnHoras yConSueldoBasico: unMontoEnPesos.! !
+
+
+!classDefinition: #Empresa category: #'Obj2-Tp2-Ejercicio1'!
+Object subclass: #Empresa
+	instanceVariableNames: 'nombre cuit listadoDeEmpleados recibosDeHaberes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:41:07'!
+cantidadDeEmpleados
+	
+	^ listadoDeEmpleados size.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 20:19:23'!
+cantidadDeRecibosDeHaberes
+	
+	^ recibosDeHaberes size.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:35:09'!
+cuit
+	
+	^ cuit! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 20:19:04'!
+empresa: unNombre yCuit: unCuit 
+	
+	nombre := unNombre.
+	cuit := unCuit.
+	listadoDeEmpleados := Set new.
+	recibosDeHaberes := Set new.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:38:56'!
+enlistaA: unEmpleado 
+	
+	listadoDeEmpleados add: unEmpleado.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 22:34:27'!
+liquidacionDeSueldoDe: unEmpleado 
+	
+	| unReciboDeHaberes |
+	
+	unReciboDeHaberes := ReciboDeHaberes de: unEmpleado el: September/03/2025.
+	
+	recibosDeHaberes add: unReciboDeHaberes.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 20:16:43'!
+montoTotalRetenciones
+
+	| montoTotal |
+	
+	montoTotal  := listadoDeEmpleados sum: [ :unEmpleado | unEmpleado retenciones].
+	
+	^​ montoTotal.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 20:15:45'!
+montoTotalSueldosBrutos
+
+	| montoTotal |
+	
+	montoTotal  := listadoDeEmpleados sum: [ :unEmpleado | unEmpleado sueldoBruto].
+	
+	^​ montoTotal.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:35:04'!
+nombre
+	
+	^ nombre! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 20:14:03'!
+pagoDeSueldos
+	
+	| montoTotal |
+	
+	montoTotal  := listadoDeEmpleados sum: [ :unEmpleado | unEmpleado sueldoNeto].
+	
+	^​ montoTotal.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:13:09'!
+recibosDeHaberes
+	
+	^ recibosDeHaberes.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:23:03'!
+recibosDeHaberesDe: unEmpleado 
+	
+	^ recibosDeHaberes detect: [ :empleado | empleado nombreDelEmpleado = unEmpleado nombre ]! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:40:35'!
+tieneA: unEmpleado 
+	
+	^ listadoDeEmpleados includes: unEmpleado.! !
+
+!Empresa methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 22:31:52'!
+tieneReciboDeHaberesDe: unEmpleado 
+	
+	^ true.! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Empresa class' category: #'Obj2-Tp2-Ejercicio1'!
+Empresa class
+	instanceVariableNames: ''!
+
+!Empresa class methodsFor: 'as yet unclassified' stamp: 'abg 8/24/2025 20:34:38'!
+conNombre: unNombre yCuit: unCuit 
+	
+	^ self new empresa: unNombre yCuit: unCuit.! !
+
+
+!classDefinition: #EstadoCivil category: #'Obj2-Tp2-Ejercicio1'!
+Object subclass: #EstadoCivil
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+
+!classDefinition: #Casado category: #'Obj2-Tp2-Ejercicio1'!
+EstadoCivil subclass: #Casado
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!Casado methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 16:44:16'!
+asignaciónPorConyuge
+	
+	^ 100 * peso.! !
+
+
+!classDefinition: #Soltero category: #'Obj2-Tp2-Ejercicio1'!
+EstadoCivil subclass: #Soltero
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!Soltero methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 16:47:16'!
+asignaciónPorConyuge
+	
+	^ 0* peso.! !
+
+!Soltero methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 16:38:58'!
+esSoltero
+	
+	^ true.! !
+
+
+!classDefinition: #ReciboDeHaberes category: #'Obj2-Tp2-Ejercicio1'!
+Object subclass: #ReciboDeHaberes
+	instanceVariableNames: 'nombreDelEmpleado dirección fechaDeEmision sueldoBruto sueldoNeto listaDeConcepto'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Obj2-Tp2-Ejercicio1'!
+
+!ReciboDeHaberes methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:21:55'!
+dirección
+	
+	^ dirección.! !
+
+!ReciboDeHaberes methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:27:33'!
+fechaDeEmision
+	
+	^ fechaDeEmision.! !
+
+!ReciboDeHaberes methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:35:24'!
+listaDeConcepto
+	
+	^ listaDeConcepto.! !
+
+!ReciboDeHaberes methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:21:12'!
+nombre
+	self shouldBeImplemented.! !
+
+!ReciboDeHaberes methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:21:32'!
+nombreDelEmpleado
+	
+	^ nombreDelEmpleado.! !
+
+!ReciboDeHaberes methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:35:08'!
+reciboDe: unEmpleado el: fechaEmisión 
+
+	nombreDelEmpleado := unEmpleado nombre.
+	dirección := unEmpleado direccion.
+	fechaDeEmision := fechaEmisión.
+	sueldoBruto := unEmpleado sueldoBruto.
+	sueldoNeto := unEmpleado sueldoNeto.
+	listaDeConcepto := DesgloceDeConceptos new.
+	
+	unEmpleado conceptosAAgregarPara: listaDeConcepto.! !
+
+!ReciboDeHaberes methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:27:40'!
+sueldoBruto
+	
+	^ sueldoBruto.! !
+
+!ReciboDeHaberes methodsFor: 'as yet unclassified' stamp: 'abg 9/3/2025 16:27:46'!
+sueldoNeto
+	
+	^ sueldoNeto.! !
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'ReciboDeHaberes class' category: #'Obj2-Tp2-Ejercicio1'!
+ReciboDeHaberes class
+	instanceVariableNames: ''!
+
+!ReciboDeHaberes class methodsFor: 'as yet unclassified' stamp: 'abg 9/2/2025 22:35:08'!
+de: unEmpleado el: fechaDeEmisión 
+	
+	^ self new reciboDe: unEmpleado el: fechaDeEmisión.! !
