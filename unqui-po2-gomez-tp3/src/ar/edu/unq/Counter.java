@@ -1,4 +1,4 @@
-package src.ar.edu.unq.po2.tp3;
+package ar.edu.unq;
 
 import java.util.ArrayList;
 import java.util.List;

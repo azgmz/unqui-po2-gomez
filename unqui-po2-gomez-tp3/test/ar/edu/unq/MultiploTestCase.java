@@ -1,10 +1,8 @@
-package ar.edu.unq.po2.tp3.test;
+package ar.edu.unq;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-
-import src.ar.edu.unq.po2.tp3.Multiplo;
 
 class MultiploTestCase {
 	@Test
