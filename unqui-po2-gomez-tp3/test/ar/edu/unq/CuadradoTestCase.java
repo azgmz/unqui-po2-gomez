@@ -36,4 +36,11 @@ class CuadradoTestCase {
 		        assert e.getMessage().equals("Los puntos no forman un cuadrado");
 		    }
 		}
+		
+		@Test
+		void testArea() {
+			
+			assertEquals(9f,cuadrado.area());
+		}
+		
 }

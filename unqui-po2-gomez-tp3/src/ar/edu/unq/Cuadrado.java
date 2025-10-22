@@ -59,6 +59,10 @@ public class Cuadrado extends FiguraGeometrica {
 		return Math.abs(verticeIzquierdoSuperior.getY() - verticeDerechoInferior.getY());
 	}
 
+	public float area() {
+		return this.base() * this.altura();
+	}
+
 }
 
 
