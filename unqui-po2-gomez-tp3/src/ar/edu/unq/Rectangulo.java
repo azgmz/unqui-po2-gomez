@@ -69,5 +69,19 @@ public class Rectangulo {
 		
 		return (2 * (this.base() + this.altura()));
 	}
+
+	public boolean esVertical() {
+		if (this.altura() > this.base()) {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean esHorizontal() {
+		if (this.base() > this.altura()) {
+			return true;
+		}
+		return false;
+	}
 	
 }

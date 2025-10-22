@@ -49,4 +49,11 @@ class RectanguloTestCase {
 		
 		assertEquals(18f,rectangulo.perimetro());
 	}
+	
+	@Test
+	void testEsVertical() {
+		
+		assertTrue(rectangulo.esVertical());
+		assertFalse(rectangulo.esHorizontal());
+	}
 }
