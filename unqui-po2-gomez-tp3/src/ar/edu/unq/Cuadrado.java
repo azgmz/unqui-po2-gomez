@@ -1,17 +1,17 @@
 package ar.edu.unq;
 
-public class Rectangulo extends FiguraGeometrica {
-
+public class Cuadrado extends FiguraGeometrica {
+	
 	private Point verticeIzquierdoSuperior;
 	private Point verticeDerechoInferior;
 	
-	public Rectangulo(Point verticeIzquierdoSuperior, Point verticeDerechoInferior) {
+	public Cuadrado(Point verticeIzquierdoSuperior, Point verticeDerechoInferior) {
 		
 		this.setVerticeIzquierdoSuperior(verticeIzquierdoSuperior);
 		this.setVerticeDerechoInferior(verticeDerechoInferior);
 		
-		if (!esRectangulo()) {
-			throw new IllegalArgumentException("Los puntos no forman un rectángulo");
+		if (!esCuadrado()) {
+			throw new IllegalArgumentException("Los puntos no forman un cuadrado");
 		}
 	}
 
@@ -31,26 +31,26 @@ public class Rectangulo extends FiguraGeometrica {
 		this.verticeDerechoInferior = verticeDerechoInferior;
 	}
 
-	public boolean esRectangulo() {
+	public boolean esCuadrado() {
 		
 		float vdix = verticeDerechoInferior.getX();
 		float visy = verticeIzquierdoSuperior.getY();
 		
 		if (vdix == visy) {
-			return false; //Crea una línea, no un rectangulo
+			return false; //Crea una línea, no un cuadrado
 		}
 		
 		if (vdix == 0 && visy == 0) {
-			return false; //Crea una línea, no un rectangulo
+			return false; //Crea una línea, no un cuadrado
 		}
 		
-		if (this.base() == this.altura()) {
-			return false; //Crea un cuadrado, no un rectangulo
+		if (this.base() != this.altura()) {
+			return false; //Crea un rectangulo, no un cuadrado
 		}
 		
 		return true;
 	}
-	
+
 	private float base() {
 		return Math.abs(verticeDerechoInferior.getX() - verticeIzquierdoSuperior.getX());
 	}
@@ -59,27 +59,6 @@ public class Rectangulo extends FiguraGeometrica {
 		return Math.abs(verticeIzquierdoSuperior.getY() - verticeDerechoInferior.getY());
 	}
 
-	public float area() {
-		return this.base() * this.altura();
-	}
-
-	public float perimetro() {
-		
-		return (2 * (this.base() + this.altura()));
-	}
-
-	public boolean esVertical() {
-		if (this.altura() > this.base()) {
-			return true;
-		}
-		return false;
-	}
-
-	public boolean esHorizontal() {
-		if (this.base() > this.altura()) {
-			return true;
-		}
-		return false;
-	}
-	
 }
+
+
