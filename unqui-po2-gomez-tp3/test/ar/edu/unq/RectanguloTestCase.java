@@ -37,5 +37,10 @@ class RectanguloTestCase {
 	        assert e.getMessage().equals("Los puntos no forman un rectángulo");
 	    }
 	}
-
+	
+	@Test
+	void area() {
+		
+		assertEquals(20f,rectangulo.area());
+	}
 }

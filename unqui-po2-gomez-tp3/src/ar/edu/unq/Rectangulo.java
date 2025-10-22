@@ -38,9 +38,6 @@ public class Rectangulo {
 		float vdix = verticeDerechoInferior.getX();
 		float visy = verticeIzquierdoSuperior.getY();
 		
-		float base = Math.abs(vdix - verticeIzquierdoSuperior.getX());
-		float altura = Math.abs(visy - verticeDerechoInferior.getY());
-		
 		if (vdix == visy) {
 			return false; //Crea una línea, no un rectangulo
 		}
@@ -49,11 +46,23 @@ public class Rectangulo {
 			return false; //Crea una línea, no un rectangulo
 		}
 		
-		if (base == altura ) {
+		if (this.base() == this.altura()) {
 			return false; //Crea un cuadrado, no un rectangulo
 		}
 		
 		return true;
+	}
+	
+	private float base() {
+		return Math.abs(verticeDerechoInferior.getX() - verticeIzquierdoSuperior.getX());
+	}
+	
+	private float altura() {
+		return Math.abs(verticeIzquierdoSuperior.getY() - verticeDerechoInferior.getY());
+	}
+
+	public float area() {
+		return this.base() * this.altura();
 	}
 	
 }
