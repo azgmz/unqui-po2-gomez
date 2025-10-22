@@ -63,6 +63,10 @@ public class Cuadrado extends FiguraGeometrica {
 		return this.base() * this.altura();
 	}
 
+	public float perimetro() {
+		return this.base() * 4;
+	}
+
 }
 
 

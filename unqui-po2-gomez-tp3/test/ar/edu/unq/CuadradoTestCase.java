@@ -43,4 +43,10 @@ class CuadradoTestCase {
 			assertEquals(9f,cuadrado.area());
 		}
 		
+		@Test
+		void testPerimetro() {
+			
+			assertEquals(12f,cuadrado.perimetro());
+		}
+		
 }
