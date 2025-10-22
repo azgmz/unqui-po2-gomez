@@ -9,17 +9,18 @@ class RectanguloTestCase {
 	
 	private Point verticeIzquierdoSuperior;
 	private Point verticeDerechoInferior;
+	public Rectangulo rectangulo;
 	
 	@BeforeEach
 	public void setUp() throws Exception {
 		verticeIzquierdoSuperior = new Point(2, 5);
 		verticeDerechoInferior = new Point(6, 0);
+		
+		rectangulo = new Rectangulo(verticeIzquierdoSuperior, verticeDerechoInferior);
 	}
 	
 	@Test
 	void creacionDeUnRectangulo() {
-		
-		Rectangulo rectangulo = new Rectangulo(verticeIzquierdoSuperior, verticeDerechoInferior);
 		
 		assertTrue(rectangulo.esRectangulo());
 	}
