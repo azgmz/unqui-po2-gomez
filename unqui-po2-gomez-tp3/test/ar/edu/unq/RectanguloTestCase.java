@@ -23,5 +23,18 @@ class RectanguloTestCase {
 		
 		assertTrue(rectangulo.esRectangulo());
 	}
+	
+	@Test
+	void creacionDeUnNoRectangulo() {
+		
+		verticeIzquierdoSuperior = new Point(1, 1);
+		verticeDerechoInferior = new Point(1, 1);
+		
+		try {
+			new Rectangulo(verticeIzquierdoSuperior, verticeDerechoInferior);
+		} catch (IllegalArgumentException e) {
+	        assert e.getMessage().equals("Los puntos no forman un rectángulo");
+	    }
+	}
 
 }
