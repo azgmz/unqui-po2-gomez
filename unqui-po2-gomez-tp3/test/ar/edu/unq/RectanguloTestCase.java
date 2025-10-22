@@ -20,13 +20,13 @@ class RectanguloTestCase {
 	}
 	
 	@Test
-	void creacionDeUnRectangulo() {
+	void testCreacionDeUnRectangulo() {
 		
 		assertTrue(rectangulo.esRectangulo());
 	}
 	
 	@Test
-	void creacionDeUnNoRectangulo() {
+	void testCreacionDeUnNoRectangulo() {
 		
 		verticeIzquierdoSuperior = new Point(1, 1);
 		verticeDerechoInferior = new Point(1, 1);
@@ -39,8 +39,14 @@ class RectanguloTestCase {
 	}
 	
 	@Test
-	void area() {
+	void testArea() {
 		
 		assertEquals(20f,rectangulo.area());
+	}
+	
+	@Test
+	void testPerimetro() {
+		
+		assertEquals(18f,rectangulo.perimetro());
 	}
 }

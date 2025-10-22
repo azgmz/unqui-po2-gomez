@@ -64,5 +64,10 @@ public class Rectangulo {
 	public float area() {
 		return this.base() * this.altura();
 	}
+
+	public float perimetro() {
+		
+		return (2 * (this.base() + this.altura()));
+	}
 	
 }
