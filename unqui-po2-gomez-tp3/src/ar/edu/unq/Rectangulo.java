@@ -2,13 +2,8 @@ package ar.edu.unq;
 
 public class Rectangulo extends FiguraGeometrica {
 
-	private Point verticeIzquierdoSuperior;
-	private Point verticeDerechoInferior;
-	
 	public Rectangulo(Point verticeIzquierdoSuperior, Point verticeDerechoInferior) {
-		
-		this.setVerticeIzquierdoSuperior(verticeIzquierdoSuperior);
-		this.setVerticeDerechoInferior(verticeDerechoInferior);
+		super(verticeIzquierdoSuperior, verticeDerechoInferior);
 		
 		if (!esRectangulo()) {
 			throw new IllegalArgumentException("Los puntos no forman un rectángulo");
@@ -33,52 +28,33 @@ public class Rectangulo extends FiguraGeometrica {
 
 	public boolean esRectangulo() {
 		
-		float vdix = verticeDerechoInferior.getX();
-		float visy = verticeIzquierdoSuperior.getY();
-		
-		if (vdix == visy) {
-			return false; //Crea una línea, no un rectangulo
-		}
-		
-		if (vdix == 0 && visy == 0) {
-			return false; //Crea una línea, no un rectangulo
-		}
-		
-		if (this.base() == this.altura()) {
+		if (base == altura) {
 			return false; //Crea un cuadrado, no un rectangulo
 		}
 		
 		return true;
 	}
-	
-	private float base() {
-		return Math.abs(verticeDerechoInferior.getX() - verticeIzquierdoSuperior.getX());
-	}
-	
-	private float altura() {
-		return Math.abs(verticeIzquierdoSuperior.getY() - verticeDerechoInferior.getY());
-	}
-
-	public float area() {
-		return this.base() * this.altura();
-	}
 
 	public float perimetro() {
 		
-		return (2 * (this.base() + this.altura()));
+		return (2 * (base + altura));
 	}
 
 	public boolean esVertical() {
-		if (this.altura() > this.base()) {
+		if (altura > base) {
 			return true;
 		}
 		return false;
 	}
 
 	public boolean esHorizontal() {
-		if (this.base() > this.altura()) {
+		if (base > altura) {
 			return true;
 		}
+		return false;
+	}
+	
+	public boolean esCuadrado() {
 		return false;
 	}
 	

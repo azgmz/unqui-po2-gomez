@@ -28,8 +28,8 @@ class RectanguloTestCase {
 	@Test
 	void testCreacionDeUnNoRectangulo() {
 		
-		verticeIzquierdoSuperior = new Point(1, 1);
-		verticeDerechoInferior = new Point(1, 1);
+		verticeIzquierdoSuperior = new Point(2, 3);
+		verticeDerechoInferior = new Point(5, 0);
 		
 		try {
 			new Rectangulo(verticeIzquierdoSuperior, verticeDerechoInferior);

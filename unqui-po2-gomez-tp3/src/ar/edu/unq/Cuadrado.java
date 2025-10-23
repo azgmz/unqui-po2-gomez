@@ -2,13 +2,8 @@ package ar.edu.unq;
 
 public class Cuadrado extends FiguraGeometrica {
 	
-	private Point verticeIzquierdoSuperior;
-	private Point verticeDerechoInferior;
-	
 	public Cuadrado(Point verticeIzquierdoSuperior, Point verticeDerechoInferior) {
-		
-		this.setVerticeIzquierdoSuperior(verticeIzquierdoSuperior);
-		this.setVerticeDerechoInferior(verticeDerechoInferior);
+		super(verticeIzquierdoSuperior, verticeDerechoInferior);
 		
 		if (!esCuadrado()) {
 			throw new IllegalArgumentException("Los puntos no forman un cuadrado");
@@ -33,40 +28,21 @@ public class Cuadrado extends FiguraGeometrica {
 
 	public boolean esCuadrado() {
 		
-		float vdix = verticeDerechoInferior.getX();
-		float visy = verticeIzquierdoSuperior.getY();
-		
-		if (vdix == visy) {
-			return false; //Crea una línea, no un cuadrado
-		}
-		
-		if (vdix == 0 && visy == 0) {
-			return false; //Crea una línea, no un cuadrado
-		}
-		
-		if (this.base() != this.altura()) {
+		if (base != altura) {
 			return false; //Crea un rectangulo, no un cuadrado
 		}
 		
 		return true;
 	}
 
-	private float base() {
-		return Math.abs(verticeDerechoInferior.getX() - verticeIzquierdoSuperior.getX());
+	public float perimetro() {
+		return base * 4;
+	}
+
+	public boolean esRectangulo() {
+		return false;
 	}
 	
-	private float altura() {
-		return Math.abs(verticeIzquierdoSuperior.getY() - verticeDerechoInferior.getY());
-	}
-
-	public float area() {
-		return this.base() * this.altura();
-	}
-
-	public float perimetro() {
-		return this.base() * 4;
-	}
-
 }
 
 
