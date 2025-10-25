@@ -20,7 +20,7 @@ class PersonaTestCase {
 	void testSePuedeSaberLosDatosDeUnaPersona() {
 		
 		assertEquals("Azul", azul.getNombre());
-		assertEquals(LocalDate.of(2004, 2, 20), azul.getFechaDeNacimiento());
+		assertEquals(LocalDate.of(2004, 2, 20), azul.getFechaNacimiento());
 		assertEquals(21, azul.edad());
 	}
 
