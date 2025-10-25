@@ -10,10 +10,12 @@ import org.junit.jupiter.api.Test;
 class PersonaTestCase {
 	
 	private Persona azul;
+	private Persona juan;
 	
 	@BeforeEach
 	public void setUp() {
 		azul = new Persona("Azul", LocalDate.of(2004, 2, 20));
+		juan = new Persona("Juan", LocalDate.of(2000, 8, 16));
 	}
 
 	@Test
@@ -22,6 +24,17 @@ class PersonaTestCase {
 		assertEquals("Azul", azul.getNombre());
 		assertEquals(LocalDate.of(2004, 2, 20), azul.getFechaNacimiento());
 		assertEquals(21, azul.edad());
+	}
+	
+	@Test
+	void testJuanEsMenorQueAzul() {
+		assertFalse(juan.menorQue(azul));
+		
+	}
+	
+	@Test
+	void testAzulEsMenorQueJuan() {
+		assertTrue(azul.menorQue(juan));
 	}
 
 }

@@ -25,4 +25,8 @@ public class Persona {
 		return Period.between(fechaNacimiento, LocalDate.now()).getYears();
 	}
 
+	public boolean menorQue(Persona otraPersona) {
+		return (this.edad() < otraPersona.edad());
+	}
+
 }
