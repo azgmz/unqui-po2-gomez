@@ -26,5 +26,17 @@ public class EquipoDeTrabajo {
 	public boolean tieneA(Persona unaPersona) {
 		return integrantes.contains(unaPersona);
 	}
+
+	public double promedio() {
+		return this.sumaDeTodasLasEdades() / this.cantidadDeIntegrantes();
+	}
+
+	private int sumaDeTodasLasEdades() {
+		int suma = 0;
+		for (Persona p : integrantes) {
+			suma += p.getEdad();
+		}
+		return suma;
+	}
 	
 }
