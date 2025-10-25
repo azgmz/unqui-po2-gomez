@@ -11,6 +11,7 @@ class PersonaTestCase {
 	
 	private Persona azul;
 	private Persona juan;
+	private Persona manuel;
 	
 	@BeforeEach
 	public void setUp() {
@@ -35,6 +36,16 @@ class PersonaTestCase {
 	@Test
 	void testAzulEsMenorQueJuan() {
 		assertTrue(azul.menorQue(juan));
+	}
+	
+	@Test
+	void testCreaAManuel() {
+		manuel = Persona.crearPersona("Manuel", LocalDate.of(2002, 10, 5));
+		
+		assertEquals("Manuel", manuel.getNombre());
+		assertEquals(LocalDate.of(2002, 10, 5), manuel.getFechaNacimiento());
+		assertEquals(23, manuel.edad());
+		
 	}
 
 }

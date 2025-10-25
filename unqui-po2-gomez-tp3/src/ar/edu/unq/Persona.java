@@ -29,4 +29,8 @@ public class Persona {
 		return (this.edad() < otraPersona.edad());
 	}
 
+	public static Persona crearPersona(String unNombre, LocalDate unaFechaDeNacimiento) {
+		return new Persona(unNombre, unaFechaDeNacimiento);
+	}
+
 }
