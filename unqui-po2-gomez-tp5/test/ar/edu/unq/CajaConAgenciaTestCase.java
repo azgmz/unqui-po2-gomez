@@ -11,6 +11,7 @@ class CajaConAgenciaTestCase {
 		private CajaConAgencia caja; 
 		private ServicioEspecifico agua;
 		private ServicioEspecifico luz;
+		private Impuesto impuesto;
 		
 		@BeforeEach
 		public void setUp() {
@@ -31,5 +32,16 @@ class CajaConAgenciaTestCase {
 			assertTrue(agencia.tieneFacturaDe(agua.getFactura()));
 			assertTrue(agencia.tieneFacturaDe(luz.getFactura()));
 			assertEquals(2, agencia.cantidadDeFacturasRegistradas());
+		}
+		
+		@Test
+		void testUnaCajaConAgenciaCobraImpuestoYLosNotificaASuAgencia() {
+			
+			impuesto = new Impuesto(350d);
+			
+			caja.cobrarServicio(impuesto);
+			
+			assertTrue(agencia.tieneFacturaDe(impuesto.getFactura()));
+			assertEquals(1, agencia.cantidadDeFacturasRegistradas());
 		}
 }

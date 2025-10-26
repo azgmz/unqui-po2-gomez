@@ -9,6 +9,7 @@ class ServiciosTestCase {
 	
 	private ServicioEspecifico agua;
 	private ServicioEspecifico luz;
+	private Factura factura;
 	
 	@BeforeEach
 	public void setUp() {
@@ -24,6 +25,14 @@ class ServiciosTestCase {
 	@Test
 	void testSePuedeCalcularElMontoPorServicioDeLuz() {
 		assertEquals(150000d, luz.calcularMonto());
+	}
+	
+	@Test
+	void testElServicioEnSuFacturaGuardaElMontoPorElServicio() {
+		
+		factura = agua.getFactura();
+		
+		assertEquals(20000d, factura.getMonto());
 	}
 
 }

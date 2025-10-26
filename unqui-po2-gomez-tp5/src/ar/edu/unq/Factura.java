@@ -2,7 +2,14 @@ package ar.edu.unq;
 
 public class Factura {
 
-	public Factura(double calcularMonto) {
+	private double monto;
+	
+	public Factura(double monto) {
+		this.monto = monto;
+	}
+
+	public Double getMonto() {
+		return monto;
 	}
 	
 }
