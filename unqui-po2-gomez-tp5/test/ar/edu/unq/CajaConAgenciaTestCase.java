@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import ar.edu.unq.caja.AgenciaRecaudadora;
+import ar.edu.unq.caja.CajaConAgencia;
+import ar.edu.unq.caja.Impuesto;
+import ar.edu.unq.caja.ServicioEspecifico;
+
 class CajaConAgenciaTestCase {
 		
 		private AgenciaRecaudadora agencia;

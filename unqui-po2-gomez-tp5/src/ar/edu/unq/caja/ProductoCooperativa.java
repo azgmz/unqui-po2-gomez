@@ -1,4 +1,4 @@
-package ar.edu.unq;
+package ar.edu.unq.caja;
 
 public class ProductoCooperativa extends Producto {
 

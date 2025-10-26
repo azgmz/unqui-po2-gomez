@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import ar.edu.unq.caja.Factura;
+import ar.edu.unq.caja.ServicioEspecifico;
+
 class ServiciosTestCase {
 	
 	private ServicioEspecifico agua;

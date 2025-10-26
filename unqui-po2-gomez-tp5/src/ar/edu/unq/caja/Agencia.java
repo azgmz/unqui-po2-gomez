@@ -1,4 +1,4 @@
-package ar.edu.unq;
+package ar.edu.unq.caja;
 
 public interface Agencia {
 	public void registrarPago(Factura factura);

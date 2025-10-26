@@ -1,4 +1,4 @@
-package ar.edu.unq;
+package ar.edu.unq.caja;
 
 import java.util.ArrayList;
 import java.util.List;
