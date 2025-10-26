@@ -41,5 +41,9 @@ public class Caja {
 		return productosRegistrados.size();
 	}
 
+	public void compraRealizada() {
+		productosRegistrados = new ArrayList<Producto>();
+	}
+
 	
 }

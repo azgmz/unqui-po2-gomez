@@ -35,5 +35,21 @@ class CajaTestCase {
 		assertEquals(0, productoT.getStock());
 		
 	}
+	
+	@Test 
+	void testLaCajaSabeElTotal() {
+		assertEquals(330d, caja.total());
+	}
+	
+	@Test 
+	void testLaCajaEliminaLosProductosRegistradosCuandoSeRealizaLaCompra() {
+		
+		caja.compraRealizada();
+		
+		assertFalse(caja.tieneRegistrado(productoC));
+		assertFalse(caja.tieneRegistrado(productoT));
+		
+		assertEquals(0, caja.cantidadDeProductosRegistrados());
+	}
 
 }
