@@ -40,5 +40,16 @@ class TrabajadorTestCase {
 	void testElTotalPercibidoDeUnTrabajadorEs1000() {
 		assertEquals(1000d, trabajador.getTotalPercibido());
 	}
+	
+	@Test
+	void testElTotalImponibleDeUnTrabajadorEs500() {
+		assertEquals(500d, trabajador.getTotalImponible());
+	}
 
+	@Test
+	void testElImpuestoAPagarDeUnTrabajadorEs10() {
+		assertEquals(10d, trabajador.getImpuestoAPagar());
+	}
+
+	
 }

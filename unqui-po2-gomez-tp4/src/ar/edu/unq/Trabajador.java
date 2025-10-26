@@ -34,4 +34,16 @@ public class Trabajador {
 		return totalPercibido;
 	}
 
+	public double getTotalImponible() {
+		double totalImponible = 0;
+		for (Ingreso ingreso : ingresos) {
+			totalImponible += ingreso.montoImponible();
+		}
+		return totalImponible;
+	}
+
+	public double getImpuestoAPagar() {
+		return getTotalImponible() * 0.02;
+	}
+
 }
