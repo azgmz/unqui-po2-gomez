@@ -25,5 +25,13 @@ public abstract class Producto {
 	public void setPrecioFinal(double precioBase) {
 		this.precioBase = precioBase;
 	}
+
+	public boolean tieneSuficienteStock() {
+		return stock >= 1;
+	}
+
+	public void descrementarStock() {
+		setStock(stock - 1);
+	}
 	
 }
