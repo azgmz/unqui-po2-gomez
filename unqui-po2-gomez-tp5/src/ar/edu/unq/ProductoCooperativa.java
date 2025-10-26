@@ -2,8 +2,8 @@ package ar.edu.unq;
 
 public class ProductoCooperativa extends Producto {
 
-	public ProductoCooperativa(int stock, double precioFinal) {
-		super(stock, precioFinal);
+	public ProductoCooperativa(int stock, double precioBase) {
+		super(stock, precioBase);
 	}
 
 	@Override

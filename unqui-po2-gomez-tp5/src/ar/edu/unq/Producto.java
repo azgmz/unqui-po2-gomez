@@ -3,11 +3,11 @@ package ar.edu.unq;
 public abstract class Producto {
 
 	private int stock;
-	private double precioFinal;
+	private double precioBase;
 	
-	public Producto(int stock, double precioFinal) {
+	public Producto(int stock, double precioBase) {
 		this.stock = stock;
-		this.precioFinal = precioFinal;
+		this.precioBase = precioBase;
 	}
 
 	public int getStock() {
@@ -19,11 +19,11 @@ public abstract class Producto {
 	}
 
 	public double getPrecioFinal() {
-		return precioFinal;
+		return precioBase;
 	}
 
-	public void setPrecioFinal(double precioFinal) {
-		this.precioFinal = precioFinal;
+	public void setPrecioFinal(double precioBase) {
+		this.precioBase = precioBase;
 	}
 	
 }
