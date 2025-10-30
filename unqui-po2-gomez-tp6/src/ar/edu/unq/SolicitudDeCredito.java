@@ -4,13 +4,13 @@ public abstract class SolicitudDeCredito {
 	
 	private Cliente cliente;
 	private double montoSolicitado;
-	private int plazoFijoEnMeses;
+	private int cantidadDeCuotas;
 	private String estadoDeLaSolicitud;
 
-	public SolicitudDeCredito(Cliente cliente, double montoSolicitado, int plazoFijoEnMeses) {
+	public SolicitudDeCredito(Cliente cliente, double montoSolicitado, int cantidadDeCuotas) {
 		this.cliente = cliente;
 		this.montoSolicitado = montoSolicitado;
-		this.plazoFijoEnMeses = plazoFijoEnMeses;
+		this.cantidadDeCuotas = cantidadDeCuotas;
 		this.estadoDeLaSolicitud = "Falta ser ingresada por un Banco";
 	}
 	
@@ -23,7 +23,7 @@ public abstract class SolicitudDeCredito {
 	}
 
 	public int getPlazoFijoEnMeses() {
-		return plazoFijoEnMeses;
+		return cantidadDeCuotas;
 	}
 	
 	public String getEstadoDeLaSolicitud() {
@@ -35,7 +35,10 @@ public abstract class SolicitudDeCredito {
 	}
 
 	public String datosDeLaSolicitud() {
-		return cliente.getNombre() + " " + cliente.getApellido() + ". Monto: $" + montoSolicitado + ". Cuotas: " + plazoFijoEnMeses;
+		return cliente.getNombre() + " " + cliente.getApellido() + ". Monto: $" + montoSolicitado + ". Cuotas: " + cantidadDeCuotas;
 	}
 
+	public double valorDeLaCuota() {
+		return montoSolicitado / cantidadDeCuotas;
+	}
 }

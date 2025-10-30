@@ -4,8 +4,8 @@ public class SolicitudDeCreditoHipotecario extends SolicitudDeCredito{
 
 	private PropiedadInmoviliaria propiedad;
 	
-	public SolicitudDeCreditoHipotecario(Cliente cliente, double montoSolicitado, int plazoFijoEnMeses, PropiedadInmoviliaria propiedad) {
-		super(cliente, montoSolicitado, plazoFijoEnMeses);
+	public SolicitudDeCreditoHipotecario(Cliente cliente, double montoSolicitado, int cantidadDeCuotas, PropiedadInmoviliaria propiedad) {
+		super(cliente, montoSolicitado, cantidadDeCuotas);
 		this.propiedad = propiedad;
 	}
 	

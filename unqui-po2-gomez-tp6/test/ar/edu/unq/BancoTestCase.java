@@ -105,5 +105,16 @@ class BancoTestCase {
 		
 		assertEquals("Juan Cruz. Monto: $100.0. Cuotas: 12", bbva.datosDeLaSolicitud(solicitudCreditoHipotecario));
 	}
+	
+	@Test
+	void testElBancoSoloTieneRegistroDeLosDatosDeLaSolicitudSiEstaLoEstaTambien() {
+	
+		Exception fallo = assertThrows(IllegalArgumentException.class, () -> {
+			 bbva.aceptarSolicitud(solicitudCreditoHipotecario);
+	        });
+		
+		 assertEquals("No hay registro de la solicitud", fallo.getMessage());
+	}
+
 
 }

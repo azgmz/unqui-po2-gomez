@@ -17,13 +17,14 @@ class SolicitudesTestCase {
 		cliente = new Cliente("Juan", "Cruz", "Monroe 123", 22, 10000);
 		propiedad = new PropiedadInmoviliaria("Casa de un piso", "Calle falsa 123", 53000);
 		solicitudP = new SolicitudDeCreditoPersonal(cliente, 100d, 5);
-		solicitudH = new SolicitudDeCreditoHipotecario(cliente, 100d, 12, propiedad);
+		solicitudH = new SolicitudDeCreditoHipotecario(cliente, 100d, 2, propiedad);
 
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testUnaSolicitudSabeElMontoDeCadaCuota() {
+		assertEquals(20, solicitudP.valorDeLaCuota());
+		assertEquals(50, solicitudH.valorDeLaCuota());
 	}
 
 }
