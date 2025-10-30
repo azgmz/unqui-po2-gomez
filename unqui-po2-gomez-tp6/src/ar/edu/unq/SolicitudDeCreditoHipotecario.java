@@ -13,4 +13,25 @@ public class SolicitudDeCreditoHipotecario extends SolicitudDeCredito{
 		return propiedad;
 	}
 
+	public int edadALaQueTerminariaDePagar() {
+		int edadALaQueTermina = this.getCliente().getEdad();
+		int cuotas = this.getCantidadDeCuotas();
+		
+		for(int cantCuotas = 1; cantCuotas <= cuotas; cantCuotas++) {
+			if (cantCuotas % 12 == 0) {
+				edadALaQueTermina++;
+			}
+		}
+		
+		return edadALaQueTermina;
+	}
+
+	public double cuotaMaximaPermitida() {
+		return (getCliente().getSueldoNetoMensual()) * 0.5;
+	}
+
+	public double montoTotalPermitido() {
+		return propiedad.getValorFiscal() * 0.7;
+	}
+
 }

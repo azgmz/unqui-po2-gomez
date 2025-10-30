@@ -22,7 +22,7 @@ public abstract class SolicitudDeCredito {
 		return montoSolicitado;
 	}
 
-	public int getPlazoFijoEnMeses() {
+	public int getCantidadDeCuotas() {
 		return cantidadDeCuotas;
 	}
 	
@@ -41,4 +41,6 @@ public abstract class SolicitudDeCredito {
 	public double valorDeLaCuota() {
 		return montoSolicitado / cantidadDeCuotas;
 	}
+	
+	public abstract double cuotaMaximaPermitida();
 }
