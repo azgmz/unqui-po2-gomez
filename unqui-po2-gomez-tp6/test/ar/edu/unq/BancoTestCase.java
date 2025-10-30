@@ -68,6 +68,21 @@ class BancoTestCase {
 		
 		 assertEquals("No hay registro de la solicitud", fallo.getMessage());
 	}
+	
+	@Test
+	void testElBancoTieneRegistroDeTodasLosTiposDeSolicitudes() {
+		
+		propiedad = new PropiedadInmoviliaria("Descripción", "Dirección", 1000);
+		solicitudCreditoHipotecario = new SolicitudDeCreditoHipotecario(cliente1, 100d, 12, propiedad);
+
+		bbva.clienteSolicitaCredito(solicitudCreditoPersonal);
+		bbva.clienteSolicitaCredito(solicitudCreditoHipotecario);
+		
+		assertTrue(bbva.tieneSolicitud(solicitudCreditoPersonal));
+		assertTrue(bbva.tieneSolicitud(solicitudCreditoHipotecario));
+		assertEquals(2, bbva.cantidadDeSolicitudes());
+	}
+
 
 	
 }
