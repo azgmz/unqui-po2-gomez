@@ -36,8 +36,13 @@ public class Banco {
 	}
 
 	public void clienteSolicitaCredito(SolicitudDeCredito solicitudCredito) {
-		solicitudes.add(solicitudCredito);
-		solicitudCredito.setEstadoDeLaSolicitud("Procesando");
+		if (tieneRegistradoA(solicitudCredito.getCliente())) {
+			solicitudes.add(solicitudCredito);
+			solicitudCredito.setEstadoDeLaSolicitud("Procesando");
+		} else {
+			throw new IllegalArgumentException("Solo clientes del banco pueden solicitar un credito");
+		}
+
 		
 	}
 

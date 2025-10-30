@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 class BancoTestCase {
 	
 	private Cliente cliente1;
+	private Cliente cliente2;
 	private Banco bbva;
 	private SolicitudDeCreditoPersonal solicitudCreditoPersonal;
 	private SolicitudDeCreditoHipotecario solicitudCreditoHipotecario;
@@ -41,6 +42,23 @@ class BancoTestCase {
 		assertEquals("Procesando", solicitudCreditoPersonal.getEstadoDeLaSolicitud());
 		
 	}
+	
+	@Test
+	void testSoloLosClientesDelBancoPuedenPedirSolicitudes() {
+		
+		cliente2 = new Cliente("Manuel", "Aristoteles", "Calle Falsa 123", 50, 53000);
+		propiedad = new PropiedadInmoviliaria("Descripción", "Dirección", 10000);
+		solicitudCreditoHipotecario = new SolicitudDeCreditoHipotecario(cliente2, 50000, 25, propiedad);
+		
+		
+		Exception fallo = assertThrows(IllegalArgumentException.class, () -> {
+			bbva.clienteSolicitaCredito(solicitudCreditoHipotecario);
+	        });
+		
+		 assertEquals("Solo clientes del banco pueden solicitar un credito", fallo.getMessage());
+		
+	}
+	
 	
 	@Test
 	void testSiUnClienteNoSolicitaLaSolicitudEnUnBancoEstaNoPuedeSerProcesada() {
