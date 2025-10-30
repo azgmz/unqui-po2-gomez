@@ -69,6 +69,10 @@ public class Banco {
 		}
 			throw new IllegalArgumentException("No hay registro de la solicitud");
 	}
+
+	public double getDineroDisponible() {
+		return dineroDisponible;
+	}
 	
 	
 }

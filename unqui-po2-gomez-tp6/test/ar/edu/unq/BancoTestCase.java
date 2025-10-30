@@ -74,7 +74,11 @@ class BancoTestCase {
 		
 		bbva.clienteSolicitaCredito(solicitudCreditoPersonal);
 		
+		bbva.setDineroDisponible(200);
+		
 		bbva.aceptarSolicitud(solicitudCreditoPersonal);
+		
+		assertEquals(100d, bbva.getDineroDisponible());
 	}
 
 	@Test

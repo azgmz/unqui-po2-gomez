@@ -11,6 +11,7 @@ class SolicitudesTestCase {
 	private PropiedadInmoviliaria propiedad;
 	private SolicitudDeCreditoPersonal solicitudP;
 	private SolicitudDeCreditoHipotecario solicitudH;
+	private Banco bbva;
 	
 	@BeforeEach
 	public void setUp() {
@@ -18,11 +19,18 @@ class SolicitudesTestCase {
 		propiedad = new PropiedadInmoviliaria("Casa de un piso", "Calle falsa 123", 53000);
 		solicitudP = new SolicitudDeCreditoPersonal(cliente, 100d, 5);
 		solicitudH = new SolicitudDeCreditoHipotecario(cliente, 100d, 2, propiedad);
+		bbva = new Banco();
 
 	}
 
 	@Test
 	void testUnaSolicitudSabeElMontoDeCadaCuota() {
+		assertEquals(20, solicitudP.valorDeLaCuota());
+		assertEquals(50, solicitudH.valorDeLaCuota());
+	}
+	
+	@Test
+	void testUnBancoAceptaLaSolicitudSiEstaCumpleConLosRequisitos() {
 		assertEquals(20, solicitudP.valorDeLaCuota());
 		assertEquals(50, solicitudH.valorDeLaCuota());
 	}
