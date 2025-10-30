@@ -1,29 +1,42 @@
 package ar.edu.unq;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Banco {
 	
-	ArrayList<Cliente> clientes;
+	List<Cliente> clientes;
+	List<SolicitudDeCredito> solicitudes;
+	
+	public Banco() {
+		this.clientes = new ArrayList<Cliente>();
+		this.solicitudes = new ArrayList<SolicitudDeCredito>();
+	}
 	
 	public void agregarCliente(Cliente cliente) {
 		this.clientes.add(cliente);
 	}
 
-	public Boolean tieneRegistradoA(Cliente cliente) {
+	public boolean tieneRegistradoA(Cliente cliente) {
 		return this.clientes.contains(cliente);
 	}
 
-	public Integer cantidadDeClientes() {
+	public int cantidadDeClientes() {
 		return this.clientes.size();
 	}
 
-	public ArrayList<Cliente> getClientes() {
+	public List<Cliente> getClientes() {
 		return clientes;
 	}
 
-	public void setClientes(ArrayList<Cliente> clientes) {
-		this.clientes = clientes;
+	public void clienteSolicitaCredito(SolicitudDeCredito solicitudCredito) {
+		solicitudes.add(solicitudCredito);
+		solicitudCredito.setEstadoDeLaSolicitud("Procesando");
+		
+	}
+
+	public boolean tieneSolicitud(SolicitudDeCredito solicitudCredito) {
+		return solicitudes.contains(solicitudCredito);
 	}
 	
 	

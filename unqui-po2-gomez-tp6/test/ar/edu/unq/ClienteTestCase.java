@@ -12,7 +12,7 @@ class ClienteTestCase {
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		cliente1 = new Cliente("Juan", "Cruz", "Monroe 123", 22, 10000d);
+		cliente1 = new Cliente("Juan", "Cruz", "Monroe 123", 22, 10000);
 	}
 
 	@Test
@@ -22,7 +22,7 @@ class ClienteTestCase {
 		assertEquals(cliente1.getApellido(), "Cruz");
 		assertEquals(cliente1.getDireccion(), "Monroe 123");
 		assertEquals(cliente1.getEdad(), 22);
-		assertEquals(cliente1.getSueldoNetoMensual(), 10000d);
+		assertEquals(cliente1.getSueldoNetoMensual(), 10000);
 		
 	}
 	
