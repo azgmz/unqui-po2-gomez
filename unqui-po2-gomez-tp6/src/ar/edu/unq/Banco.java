@@ -7,10 +7,12 @@ public class Banco {
 	
 	List<Cliente> clientes;
 	List<SolicitudDeCredito> solicitudes;
+	double dineroDisponible;
 	
 	public Banco() {
 		this.clientes = new ArrayList<Cliente>();
 		this.solicitudes = new ArrayList<SolicitudDeCredito>();
+		this.dineroDisponible = 0;
 	}
 	
 	public void agregarCliente(Cliente cliente) {
@@ -28,6 +30,10 @@ public class Banco {
 	public List<Cliente> getClientes() {
 		return clientes;
 	}
+	
+	public void setDineroDisponible(double dineroDisponible) {
+		this.dineroDisponible = dineroDisponible;
+	}
 
 	public void clienteSolicitaCredito(SolicitudDeCredito solicitudCredito) {
 		solicitudes.add(solicitudCredito);
@@ -37,6 +43,15 @@ public class Banco {
 
 	public boolean tieneSolicitud(SolicitudDeCredito solicitudCredito) {
 		return solicitudes.contains(solicitudCredito);
+	}
+
+	public void aceptarSolicitud(SolicitudDeCredito solicitudCredito) {
+		if (solicitudes.contains(solicitudCredito)) {
+			solicitudCredito.setEstadoDeLaSolicitud("Aceptada");
+			dineroDisponible -= solicitudCredito.getMontoSolicitado();
+		} else {
+			throw new IllegalArgumentException("No hay registro de la solicitud");
+		}
 	}
 	
 	
