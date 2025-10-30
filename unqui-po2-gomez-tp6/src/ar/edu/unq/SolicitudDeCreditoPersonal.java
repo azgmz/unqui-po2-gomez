@@ -6,5 +6,9 @@ public class SolicitudDeCreditoPersonal extends SolicitudDeCredito{
 		super(cliente, montoSolicitado, cantidadDeCuotas);
 	}
 
+	public double cuotaMaximaPermitida() {
+		return 0.7 * (getCliente().getSueldoNetoMensual());
+	}
+
 
 }

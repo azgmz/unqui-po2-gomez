@@ -15,24 +15,31 @@ class SolicitudesTestCase {
 	
 	@BeforeEach
 	public void setUp() {
-		cliente = new Cliente("Juan", "Cruz", "Monroe 123", 22, 10000);
+		cliente = new Cliente("Juan", "Cruz", "Monroe 123", 22, 1250);
 		propiedad = new PropiedadInmoviliaria("Casa de un piso", "Calle falsa 123", 53000);
-		solicitudP = new SolicitudDeCreditoPersonal(cliente, 100d, 5);
+		solicitudP = new SolicitudDeCreditoPersonal(cliente, 3500, 4);
 		solicitudH = new SolicitudDeCreditoHipotecario(cliente, 100d, 2, propiedad);
 		bbva = new Banco();
+		
+		bbva.agregarCliente(cliente);
 
 	}
 
 	@Test
 	void testUnaSolicitudSabeElMontoDeCadaCuota() {
-		assertEquals(20, solicitudP.valorDeLaCuota());
+		assertEquals(875, solicitudP.valorDeLaCuota());
 		assertEquals(50, solicitudH.valorDeLaCuota());
 	}
 	
 	@Test
-	void testUnBancoAceptaLaSolicitudSiEstaCumpleConLosRequisitos() {
-		assertEquals(20, solicitudP.valorDeLaCuota());
-		assertEquals(50, solicitudH.valorDeLaCuota());
+	void testUnBancoAceptaLaSolicitudDeCreditoPersonalSiLosIngresosAnualesSonAlMenosDe15000YQueLaCuotaNoSupereEl70POrCientoDeSusIngresosMensuales() {
+
+		bbva.clienteSolicitaCredito(solicitudP);
+		bbva.aceptarSolicitud(solicitudP);
+		
+		assertEquals(15000d ,cliente.sueldoNetoAnual());
+		assertEquals(solicitudP.valorDeLaCuota(), solicitudP.cuotaMaximaPermitida());
+		assertEquals("Aceptada", solicitudP.getEstadoDeLaSolicitud());
 	}
 
 }
