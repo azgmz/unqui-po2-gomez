@@ -33,4 +33,9 @@ public abstract class SolicitudDeCredito {
 	public void setEstadoDeLaSolicitud(String estadoDeLaSolicitud) {
 		this.estadoDeLaSolicitud = estadoDeLaSolicitud;
 	}
+
+	public String datosDeLaSolicitud() {
+		return cliente.getNombre() + " " + cliente.getApellido() + ". Monto: $" + montoSolicitado + ". Cuotas: " + plazoFijoEnMeses;
+	}
+
 }

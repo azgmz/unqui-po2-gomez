@@ -62,7 +62,13 @@ public class Banco {
 	public int cantidadDeSolicitudes() {
 		return solicitudes.size();
 	}
-	
+
+	public String datosDeLaSolicitud(SolicitudDeCredito solicitudCredito) {
+		if (solicitudes.contains(solicitudCredito)) {
+			return solicitudCredito.datosDeLaSolicitud();
+		}
+			throw new IllegalArgumentException("No hay registro de la solicitud");
+	}
 	
 	
 }

@@ -21,6 +21,9 @@ class BancoTestCase {
 		solicitudCreditoPersonal = new SolicitudDeCreditoPersonal(cliente1, 100d, 5);
 		
 		bbva.agregarCliente(cliente1);
+		
+		propiedad = new PropiedadInmoviliaria("Descripción", "Dirección", 1000);
+		solicitudCreditoHipotecario = new SolicitudDeCreditoHipotecario(cliente1, 100d, 12, propiedad);
 
 	}
 
@@ -76,9 +79,6 @@ class BancoTestCase {
 
 	@Test
 	void testElBancoSoloPuedeAceptarSolicitudesQueTengaRegistradas() {
-		
-		propiedad = new PropiedadInmoviliaria("Descripción", "Dirección", 1000);
-		solicitudCreditoHipotecario = new SolicitudDeCreditoHipotecario(cliente1, 100d, 12, propiedad);
 
 		 Exception fallo = assertThrows(IllegalArgumentException.class, () -> {
 			 bbva.aceptarSolicitud(solicitudCreditoHipotecario);
@@ -89,9 +89,6 @@ class BancoTestCase {
 	
 	@Test
 	void testElBancoTieneRegistroDeTodasLosTiposDeSolicitudes() {
-		
-		propiedad = new PropiedadInmoviliaria("Descripción", "Dirección", 1000);
-		solicitudCreditoHipotecario = new SolicitudDeCreditoHipotecario(cliente1, 100d, 12, propiedad);
 
 		bbva.clienteSolicitaCredito(solicitudCreditoPersonal);
 		bbva.clienteSolicitaCredito(solicitudCreditoHipotecario);
@@ -101,6 +98,12 @@ class BancoTestCase {
 		assertEquals(2, bbva.cantidadDeSolicitudes());
 	}
 
+	@Test
+	void testElBancoTieneRegistroDelClienteElMontoYElPlazoEnMesesDeTodaSolicitud() {
+		
+		bbva.clienteSolicitaCredito(solicitudCreditoHipotecario);
+		
+		assertEquals("Juan Cruz. Monto: $100.0. Cuotas: 12", bbva.datosDeLaSolicitud(solicitudCreditoHipotecario));
+	}
 
-	
 }
