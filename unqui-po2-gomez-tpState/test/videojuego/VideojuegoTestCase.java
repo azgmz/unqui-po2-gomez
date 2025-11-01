@@ -20,5 +20,12 @@ class VideojuegoTestCase {
 	void testTodaMaquinaSeCreaConElEstadoApagada() {
 		assertTrue(maquina.estaApagada());
 	}
+	
+	@Test
+	void testCuandoUnaMaquinaSePrendeYSeTocaElBotonDeInicioSeGeneralUnCartelQueIndicaMeterFichas() {
+		maquina.encender();
+		maquina.esPrecionadoBotonDeInicio();
+	}
+
 
 }

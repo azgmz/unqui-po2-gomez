@@ -1,15 +1,15 @@
 package videojuego;
 
-public class Apagada extends Estado {
+public class Encendida extends Estado {
 
 	@Override
 	protected boolean estaApagada() {
-		return true;
+		return false;
 	}
 
 	@Override
 	protected boolean estaEncendida() {
-		return false;
+		return true;
 	}
 
 }
