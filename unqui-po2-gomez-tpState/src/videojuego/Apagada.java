@@ -3,13 +3,13 @@ package videojuego;
 public class Apagada extends Estado {
 
 	@Override
-	protected boolean estaApagada() {
+	public boolean estaApagada() {
 		return true;
 	}
 
 	@Override
-	protected boolean estaEncendida() {
-		return false;
+	protected void esPrecionadoBotonDeInicio(int fichasInsertadas, MaquinaDeVideojuego maquina) {
+		System.out.println("Encienda la maquina para poder jugar");
 	}
 
 }

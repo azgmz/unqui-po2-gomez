@@ -8,12 +8,10 @@ import org.junit.jupiter.api.Test;
 class VideojuegoTestCase {
 
 	private MaquinaDeVideojuego maquina;
-	//private Ficha ficha;
 	
 	@BeforeEach
 	public void setUp() {
 		maquina = new MaquinaDeVideojuego();
-		//ficha = new Ficha();
 	}
 	
 	@Test
@@ -25,7 +23,41 @@ class VideojuegoTestCase {
 	void testCuandoUnaMaquinaSePrendeYSeTocaElBotonDeInicioSeGeneralUnCartelQueIndicaMeterFichas() {
 		maquina.encender();
 		maquina.esPrecionadoBotonDeInicio();
+		
+		assertTrue(maquina.estaEncendida());
 	}
+
+	@Test
+	void testSiSeIngresaUnaFichaConLaMaquinaEncendidaPuedeJugarUnaPersonaYLaMaquinaPasaAlEstadoJugando() {
+		maquina.encender();
+		maquina.insertarFicha();
+		maquina.esPrecionadoBotonDeInicio();
+		
+		assertTrue(maquina.estaJugando());
+	}
+	
+	@Test
+	void testSiSeIngresanDosFichaConLaMaquinaEncendidaPuedenJugarDosPersonasYLaMaquinaPasaAlEstadoJugando() {
+		maquina.encender();
+		maquina.insertarFicha();
+		maquina.insertarFicha();
+		maquina.esPrecionadoBotonDeInicio();
+		
+		assertTrue(maquina.estaJugando());
+	}
+	
+	@Test
+	void testCuandoUnaMaquinaTerminaElJuegoEstaSeReinicia() {
+		maquina.encender();
+		maquina.insertarFicha();
+		maquina.insertarFicha();
+		maquina.esPrecionadoBotonDeInicio();
+		maquina.terminarJuego();
+		
+		assertEquals(0, maquina.getfichasInsertadas());
+		assertTrue(maquina.estaApagada());
+	}
+
 
 
 }
