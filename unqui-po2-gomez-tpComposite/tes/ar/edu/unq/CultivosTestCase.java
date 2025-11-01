@@ -23,38 +23,40 @@ class CultivosTestCase {
 		porcionPuraTrigo = new PorcionPura(trigo);
 		porcionPuraSoja = new PorcionPura(soja);
 		//porcionMixta = new PorcionMixta();
+		
+		int maximoDeCultivos = 100;
+		for(int i = 0; i < maximoDeCultivos; i++) {
+			porcionPuraTrigo.plantar(trigo);
+		}
+		porcionPuraSoja.plantar(soja);
 	
 	}
 	
 	@Test
 	void testEnUnaPorcionPuraDeUnCultivoSePuedePlantarEseCultivo() {
-		porcionPuraTrigo.plantar(trigo);
-		porcionPuraSoja.plantar(soja);
-		
 		assertTrue(porcionPuraTrigo.tienePlantado(trigo));
 		assertTrue(porcionPuraSoja.tienePlantado(soja));
 	}
 	
 	@Test
 	void testEnUnaPorcionPuraSePuedeTenerHasta100Cultivos() {
-		int maximoDeCultivos = 100;
-		for(int i = 0; i < maximoDeCultivos; i++) {
-			porcionPuraTrigo.plantar(trigo);
-		}
 		assertEquals(100, porcionPuraTrigo.getCantidadDeCultivo());
 	}
 	
 	@Test
 	void testEnUnaPorcionPuraNoPuedeTenerMasDe100Cultivos() {
-		int maximoDeCultivos = 100;
-		for(int i = 0; i < maximoDeCultivos; i++) {
-			porcionPuraTrigo.plantar(trigo);
-		}
 		Exception fallo = assertThrows(IllegalArgumentException.class, () -> {
 			porcionPuraTrigo.plantar(trigo);
 	        });
 		
 		 assertEquals("No se pueden plantar más de 100 cultivos", fallo.getMessage());
 	}
+	
+	@Test
+	void testGananciaAnualEstimadaDeUnaPorcionPura() {
+		 assertEquals(3600, porcionPuraTrigo.gananciaAnualEstimada());
+		 assertEquals(60, porcionPuraSoja.gananciaAnualEstimada());
+	}
+
 
 }

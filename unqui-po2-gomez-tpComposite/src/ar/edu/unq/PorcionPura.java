@@ -28,5 +28,10 @@ public class PorcionPura implements PorcionDeTierra{
 		return cantidadDeCultivo;
 	}
 
+	@Override
+	public double gananciaAnualEstimada() {
+		return 12 * cultivoPermitido.getPrecioUnitario() * cantidadDeCultivo;
+	}
+
 
 }
