@@ -19,7 +19,6 @@ public class PorcionPura implements PorcionDeTierra{
 			}
 	}
 		 
-	@Override
 	public boolean tienePlantado(Cultivo cultivo) {
 		return cultivo == cultivoPermitido;
 	}

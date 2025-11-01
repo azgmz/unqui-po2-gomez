@@ -10,9 +10,8 @@ class CultivosTestCase {
 	private Trigo trigo;
 	private Soja soja;
 	
-	private PorcionPura porcionPuraTrigo;
-	private PorcionPura porcionPuraSoja;
-	//private ProcionMixta porcionMixta;
+	private PorcionPura porcionPuraTrigo, porcionPuraSoja, p1, p2;
+	private PorcionMixta porcionMixta;
 	
 	
 	@BeforeEach
@@ -22,13 +21,21 @@ class CultivosTestCase {
 		
 		porcionPuraTrigo = new PorcionPura(trigo);
 		porcionPuraSoja = new PorcionPura(soja);
-		//porcionMixta = new PorcionMixta();
+		p1 = new PorcionPura(trigo);
+		p2 = new PorcionPura(soja);
 		
 		int maximoDeCultivos = 100;
 		for(int i = 0; i < maximoDeCultivos; i++) {
 			porcionPuraTrigo.plantar(trigo);
 		}
 		porcionPuraSoja.plantar(soja);
+		p1.plantar(trigo);
+		p2.plantar(soja);
+		p1.plantar(trigo);
+		p2.plantar(soja);
+		
+		
+		porcionMixta = new PorcionMixta(porcionPuraTrigo, porcionPuraSoja, p1, p2);
 	
 	}
 	
@@ -58,5 +65,18 @@ class CultivosTestCase {
 		 assertEquals(60, porcionPuraSoja.gananciaAnualEstimada());
 	}
 
+	@Test
+	void testEnUnaPorcionMixtaSeTienenCuatroPorcionesParaCultivarUnTipoDeCultivo() {
+		 assertTrue(porcionMixta.contienePorcion(porcionPuraTrigo));
+		 assertTrue(porcionMixta.contienePorcion(porcionPuraSoja));
+		 assertTrue(porcionMixta.contienePorcion(p1));
+		 assertTrue(porcionMixta.contienePorcion(p2));
+	}
+
+	@Test
+	void testGananciaAnualEstimadaDeUnaPorcionMixta() {
+		 assertEquals(3852, porcionMixta.gananciaAnualEstimada());
+	}
+	
 
 }
